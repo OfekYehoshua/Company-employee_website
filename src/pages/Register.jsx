@@ -1,12 +1,12 @@
 import ResponsiveAppBar from "../components/Navbar"
 
-const Archive = () => {
+const Register = () => {
     return(
         <div>
             <ResponsiveAppBar/>
-            <h1>archive</h1>
+            <h1>Register</h1>
         </div>
     )
 }
 
-export default Archive
+export default Register
