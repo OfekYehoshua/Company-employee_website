@@ -1,9 +1,10 @@
-const Profile = () => {
-    return(
-        <div>
+// const Profile = () => {
+//     const values = useSelector(selectProfile);
+//     return(
+//         <div>
+    
+//         </div>
+//     )
+// }
 
-        </div>
-    )
-}
-
-export default Profile
+// export default Profile
