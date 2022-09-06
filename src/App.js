@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Register from './pages/Register';
 import Profile from './pages/Profile';
 import Archive from './pages/Archive';
+import ActionBarComponentProps from './components/calander';
 
 function App() {
   return (
