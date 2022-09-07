@@ -1,6 +1,9 @@
 body.active-modal {
     overflow-y: hidden;
 }
+*{
+    color: #99582a;
+}
 
 .btn-modal {
     padding: 10px 20px;
@@ -28,7 +31,7 @@ body.active-modal {
     left: 50%;
     transform: translate(-50%, -50%);
     line-height: 1.4;
-    background: white;
+    background:#ffe6a7;
     padding: 14px 28px;
     border-radius: 3px;
     max-width: 600px;
@@ -40,26 +43,26 @@ body.active-modal {
     top: 10px;
     right: 10px;
     padding: 3px 7px;
-    color: white;
-    background-color: rgba(20, 20, 255, 0.852);
+    color: #ffe6a7;
+    background-color:  #6f1d1b;
     border-radius: 6px;
     margin-top: 0%;
     position: relative ; top: 60%;left: 90%;
 }
     .close-modal:hover{
-        background-color: rgb(79, 79, 249);
+        background-color: #6f1d1b;
         
     }
 
 
 .btn-modal{
-    color: white;
-    background-color: rgba(20, 20, 255, 0.852);
+    color:#ffe6a7;
+    background-color:  #6f1d1b;
     border-radius: 6px;
     margin-top: 0%;
 }
 .btn-modal:hover{
-    background-color: rgb(79, 79, 249);
+    background-color: #6f1d1b;
 }
 
 #transition-modal-title{

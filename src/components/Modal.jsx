@@ -22,30 +22,30 @@ const style = {
   p: 4,
 };
 
-export default function TransitionsModal() {
+export default function TransitionsModal(props) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   return (
     <div>
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345 , maxHeight: 400, height:"70vh"}}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="140"
-          image="https://mui.com/static/images/cards/contemplative-reptile.jpg"
+          image={props.src}
           alt="green iguana"
           onClick={handleOpen}
         />
         <CardContent
             onClick={handleOpen}>
           <Typography gutterBottom variant="h5" component="div">
-            Lizard
+            {props.title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+          {props.description}
+
           </Typography>
         </CardContent>      
       <Modal
@@ -62,7 +62,7 @@ export default function TransitionsModal() {
         <Fade in={open}>
           <Box sx={style}>
             <Typography id="transition-modal-title" variant="h6" component="h2">
-              Text in a modal
+              Title
             </Typography>
             <Typography id="transition-modal-description" sx={{ mt: 2 }}>
               Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
@@ -72,8 +72,9 @@ export default function TransitionsModal() {
       </Modal>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          Share
+        <Button size="small" color="primary"
+         onClick={handleOpen}>
+          Tap to read more
         </Button>
       </CardActions>
     </Card>
