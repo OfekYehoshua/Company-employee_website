@@ -15,9 +15,6 @@ function App() {
         <Route path="/profile" element={<Profile/>} />
         <Route path="/archive" element={<Archive/>} />
       </Routes>
-      <SignUp></SignUp>
-      <LogIn></LogIn>
-
     </div>
   );
 }
