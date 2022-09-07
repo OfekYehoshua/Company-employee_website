@@ -13,9 +13,8 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "./signup.css";
-import { useDispatch } from 'react-redux';
-import {update} from '../ProfileSlice'
-
+import { useDispatch } from "react-redux";
+import { update } from "../ProfileSlice";
 
 function Copyright(props) {
   return (
@@ -50,11 +49,11 @@ export default function SignUp() {
       phoneNum: data.get("phone"),
       rule: data.get("rule"),
       password: data.get("password"),
-    }
-dispatch(update(values))
+    };
+    dispatch(update(values));
   };
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   return (
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">

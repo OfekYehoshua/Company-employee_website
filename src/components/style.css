@@ -1,0 +1,15 @@
+.nav{
+    position:fixed !important;
+    top: 0;
+    z-index: 100;
+}
+
+.link{
+    color: white;
+    text-decoration: none;
+}
+
+.setting-links{
+    color: rgba(0, 0, 0, 0.87);
+    text-decoration: none;
+}
