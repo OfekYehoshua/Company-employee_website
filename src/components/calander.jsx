@@ -4,7 +4,7 @@ import TextField from '@mui/material/TextField';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { StaticDatePicker } from '@mui/x-date-pickers/StaticDatePicker';
-import "./calander.css";
+import "./calendar.css";
 import Modal from './ModalCalendar';
 
 
@@ -14,7 +14,8 @@ export default function ActionBarComponentProps() {
 console.log(value.$D, value.$M, value.$y)  
 
 return (
-    <LocalizationProvider dateAdapter={AdapterDayjs}>
+  <div className='calendarcss'>
+    <LocalizationProvider className="calendar" dateAdapter={AdapterDayjs}>
       <StaticDatePicker
         onChange={(newValue) => setValue(newValue)}
         value={value}
@@ -31,7 +32,7 @@ return (
         <Modal day={value.$D} mounth={value.$M+1} year={value.$y}/>,
       </div>
     </LocalizationProvider>
-    
+    </div>
   );
 }
  
