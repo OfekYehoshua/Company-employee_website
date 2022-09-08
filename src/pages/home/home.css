@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
 * {
   font-family: "Oswald", sans-serif;
   color: #6f1d1b;
@@ -47,49 +47,57 @@
   height: 70vh;
 }
 #h1 {
-    color: #6f1d1b;
+  color: #6f1d1b;
   font-size: 60px;
   margin-top: 0px;
 }
 #quote {
-  color: #99582a;
+  color: #6f1d1b;
   font-size: 75px;
   line-height: 74px;
   font-weight: 700;
   margin: 0 5px 24px;
   float: left;
-  margin: 0 5px 24px;
   padding: 25px;
-  font-family: "Oswald", sans-serif !important;
+  font-family: "Dancing Script", cursive;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  margin-left: 240px;
 }
 #punchline {
-  color: #99582a;
+  color: #6f1d1b;
   font-size: 75px;
   line-height: 74px;
   font-weight: 700;
   margin: 0 5px 24px;
   float: left;
   padding: 10px;
-  margin: 0 5px 24px;
-  font-family: "Oswald", sans-serif !important;
+  font-family: "Dancing Script", cursive;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  margin-left: 400px;
 }
 #name {
-    color: #99582a;
+  color: #99582a;
   font-size: 25px;
   height: 0vh;
   padding-top: 49vh;
-  font-family: "Oswald", sans-serif !important;
 }
-#archive{
-    height: 30vh;
-    width: 30vw;
+#archive {
+  height: 30vh;
+  width: 30vw;
 }
-#boxArchive{
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url("https://s3-us-east-2.amazonaws.com/maryville/wp-content/uploads/2020/06/10142726/archives-pic-1.jpg");
+#boxArchive {
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("https://s3-us-east-2.amazonaws.com/maryville/wp-content/uploads/2020/06/10142726/archives-pic-1.jpg");
 }
-#explainArchive{
-    font-size: 30px;
-    font-weight: 700;
+#boxArchive :hover {
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  color: #ffe6a7;
+}
+
+@media only screen and (max-width: 600px) {
 }

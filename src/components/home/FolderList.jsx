@@ -16,7 +16,9 @@ import ArchiveIcon from '@mui/icons-material/Archive';
 
 export default function FolderList() {
   return (
+    
     <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+      <h1>choose event </h1>
       <ListItem>
         <ListItemAvatar>
           <Avatar>
@@ -58,5 +60,6 @@ export default function FolderList() {
         <ListItemText primary="Birthday party" secondary="Jan 9, 2014" />
       </ListItem>
     </List>
+   
   );
 }

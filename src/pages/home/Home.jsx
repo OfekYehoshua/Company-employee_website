@@ -5,11 +5,10 @@ import Blog from "../../components/home/Blog"
 import ActionBarComponentProps from "../../components/caledarPayment/calander"
 import Aboutcard from "../../components/home/Aboutcard"
 import FolderList from "../../components/home/FolderList"
-
 import "./home.css"
-
 import { Typography } from "@mui/material"
 import ArchiveIcon from '@mui/icons-material/Archive';
+import { Link } from "react-router-dom"
 
 const Home = () => {
     return(
@@ -32,8 +31,12 @@ const Home = () => {
                 <Blog></Blog>
             </div>
             <div id="boxArchive">
-                <p id="explainArchive">TO ARCHIVE</p>
-                <ArchiveIcon id="archive"></ArchiveIcon>
+                <h1 id="explainArchive" className="effect" >TO ARCHIVE</h1>
+                <Link to="/archive" className="effect">
+                <ArchiveIcon id="archive">
+                </ArchiveIcon>
+                </Link>
+
             </div>
             
         </div>
