@@ -4,7 +4,7 @@ import Banner from "../../components/profile/upper/Banner";
 import ProfilePic from "../../components/profile/upper/ProfilePic";
 import WorkerDetails from "../../components/profile/middle/WorkerDetail";
 import Feedbacks from "../../components/profile/middle/Feedbacks";
-import NameAndEdit from "../../components/profile/upper/EditAndName";
+import NameAndEdit from "../../components/EditAndName";
 import Socials from "../../components/profile/upper/Socials";
 
 import LocationOnIcon from "@mui/icons-material/LocationOn";

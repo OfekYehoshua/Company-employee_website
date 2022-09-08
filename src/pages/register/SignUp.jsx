@@ -1,5 +1,5 @@
 import * as React from "react";
-import {update} from "../../ProfileSlice";
+import { update } from "../../ProfileSlice";
 import "./signup.css";
 
 import ResponsiveAppBar from "../../components/navbar/Navbar";
