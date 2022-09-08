@@ -13,6 +13,9 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
+import { selectUser, updateUser } from "../../ProfileSlice"
+import { useDispatch, useSelector } from 'react-redux';
+
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -29,15 +32,21 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function LogIn() {
+  
+  const x = useSelector(selectUser)
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
+    const user = {
       email: data.get('email'),
       password: data.get('password'),
-    });
+    };
+    dispatch(updateUser(user))
+    console.log(x)
   };
-
+  const dispatch = useDispatch()
+  
   return (
     <ThemeProvider theme={theme}>
       <Grid container component="main" sx={{ height: '100vh' }}>

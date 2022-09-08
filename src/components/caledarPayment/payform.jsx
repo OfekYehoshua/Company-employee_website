@@ -2,7 +2,7 @@ import { Formik } from "formik";
 import { useState } from "react";
 import * as Yup from "yup"
 import './payform.css'
-import AlertPayment from "./AlertPayment";
+import AlertPayment from "../AlertPayment";
 
 
 const Show = () => {

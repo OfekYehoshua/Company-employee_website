@@ -14,7 +14,7 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "./signup.css";
 import { useDispatch } from 'react-redux';
-import {update} from '../ProfileSlice'
+import {update, updateUser} from '../ProfileSlice'
 import { useFormik } from 'formik'
 
 

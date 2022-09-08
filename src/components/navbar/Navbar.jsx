@@ -14,6 +14,8 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from "react-router-dom"
 import "./navbar.css"
+import { useSelector } from 'react-redux';
+import { selectUser, selectProfile } from '../../ProfileSlice';
 
 
 const pages = ['/', '/archive'];
@@ -37,6 +39,9 @@ const ResponsiveAppBar = () => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
+  const user = useSelector(selectUser)
+  const profile = useSelector(selectProfile)
 
   return (
     <AppBar position="static" className='nav' style={{backgroundColor:'#99582a'}}>
@@ -93,7 +98,6 @@ const ResponsiveAppBar = () => {
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                     <Link to={page}  className="link">{page == '/' ? "home" : page.slice(1)}</Link> 
-
                 </MenuItem>
               ))}
             </Menu>
@@ -130,25 +134,30 @@ const ResponsiveAppBar = () => {
           </Box>
 
           <Box sx={{ flexGrow: 0, display: { xs: 'flex', md: 'flex' }}}>
-              <Button
-                  key="Log-in"
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, mr: 2, color: 'white', display: 'block', backgroundColor: '#6f1d1b'}}
-                >
-                  <Link to="/login"  className="link">Log-in</Link>
-              </Button>
-              <Button
-                  key="Sign-up"
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, mr: 2, color: 'white', display: 'block', backgroundColor: '#6f1d1b' }}
-                >
-                  <Link to="/signup"  className="link">Sign-up</Link>
-              </Button>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
+              {user.email === "" || user.password ==="" ? 
+                        <>
+                          <Button
+                              key="Log-in"
+                              onClick={handleCloseNavMenu}
+                              sx={{ my: 2, mr: 2, color: 'white', display: 'block', backgroundColor: '#6f1d1b'}}
+                            >
+                              <Link to="/login"  className="link">Log-in</Link>
+                          </Button>
+                          <Button
+                              key="Sign-up"
+                              onClick={handleCloseNavMenu}
+                              sx={{ my: 2, mr: 2, color: 'white', display: 'block', backgroundColor: '#6f1d1b' }}
+                            >
+                              <Link to="/signup"  className="link">Sign-up</Link>
+                          </Button>
+                        </>
+                      :
+                      <Tooltip title="Open settings">
+                        <IconButton onClick={handleOpenUserMenu}>
+                          <Avatar alt="Remy Sharp" src={profile.photo}  sx={{ width: 54, height: 54}}/>
+                        </IconButton>
+                      </Tooltip>
+                      }
             <Menu
               sx={{ mt: '45px' }}
               id="menu-appbar"
