@@ -1,6 +1,6 @@
 
 import * as React from 'react';
-import "./Modal.css";
+import "./modalCalendar.css";
 import PaymentForm from "./payform";
 
 import Backdrop from '@mui/material/Backdrop';
