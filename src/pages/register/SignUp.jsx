@@ -9,7 +9,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import Link from "@mui/material/Link";
+import { Link } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
@@ -45,7 +45,8 @@ export default function SignUp() {
   return (
     <>
       <ResponsiveAppBar/>
-      <ThemeProvider theme={theme}>
+      <div className="theme">
+      <ThemeProvider theme={theme} >
         <Container component="main" maxWidth="xs">
           <CssBaseline />
           <Box
@@ -56,7 +57,7 @@ export default function SignUp() {
               alignItems: "center",
             }}
           >
-            <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+            <Avatar sx={{ m: 1, bgcolor: "secondary.main" }} style={{backgroundColor:"#99582a"}}>
               <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
@@ -101,12 +102,12 @@ export default function SignUp() {
                   />
                 </Grid>
                 <Grid item xs={12}>
-                  <TextField
+                  <TextField style={{fontWeight: "lighter"}}
                     className="date"
                     required
                     fullWidth
                     id="date"
-                    label="Birth Date"
+                    // label="Birth Date"
                     name="date"
                     autoComplete="date"
                     type="date"
@@ -173,14 +174,13 @@ export default function SignUp() {
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
+                style={{backgroundColor:"#ffe6a7"}}
               >
                 Sign Up
               </Button>
               <Grid container justifyContent="flex-end">
                 <Grid item>
-                  <Link to="/login" variant="body2">
-                    {"Already have an account? Sign in"}
-                  </Link>
+                  <Link to="/login">Allready have an account? sign in</Link>
                 </Grid>
               </Grid>
             </Box>
@@ -188,6 +188,7 @@ export default function SignUp() {
           <Copyright sx={{ mt: 5 }} />
         </Container>
       </ThemeProvider>
+      </div>
     </>
   );
 }
@@ -201,7 +202,7 @@ function Copyright(props) {
       {...props}
     >
       {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
+      <Link color="inherit" to="/">
         Your Website
       </Link>{" "}
       {new Date().getFullYear()}

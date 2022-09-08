@@ -8,6 +8,7 @@ import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
+import "./modal.css"
 
 const style = {
   position: "absolute",
@@ -71,9 +72,9 @@ export default function TransitionsModal(props) {
       </Modal>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary"
+        <Button size="small" color="primary" className="effect"
          onClick={handleOpen}>
-          Tap to read more
+          Tap to read 
         </Button>
       </CardActions>
     </Card>
