@@ -4,11 +4,11 @@ export const ProfileSlice = createSlice({
   name: "profile",
   initialState: {
     profile: {
-      firstName: "Amit",
-      lastName: "El Al",
-      email: "amio121212@email.com",
+      firstName: "Amalia",
+      lastName: "Nilsson",
+      email: "amio121212@gmail.com",
       date: "19/04/2000",
-      photo: "z",
+      photo: "https://i0.wp.com/newdoorfiji.com/wp-content/uploads/2018/03/profile-img-1.jpg?ssl=1",
       phone: "+972 50-530-9880",
       rule: "Advisor",
       password: "1234",
@@ -21,11 +21,16 @@ export const ProfileSlice = createSlice({
       twitter: "https://twitter.com/_exize",
       instegram: "https://www.instagram.com/phil",
     },
+
+    user: {
+      email: "",
+      password: ""
+    }
   },
 
   reducers: {
     update: (state, values) => {
-      console.log(values.payload);
+      console.log(values.payload)
       state.profile.firstName = values.payload.firstName;
       state.profile.lastName = values.payload.lastName;
       state.profile.email = values.payload.email;
@@ -34,19 +39,29 @@ export const ProfileSlice = createSlice({
       state.profile.phone = values.payload.phone;
       state.profile.rule = values.payload.rule;
       state.profile.password = values.payload.password;
+      state.user.email = values.payload.email
+      state.user.password = values.payload.password
     },
 
-    updateSocials: (state, value) => {
-      state.socials.address = value.payload.address;
-      state.socials.linkedIn = value.payload.linkedIn;
-      state.socials.facebook = value.payload.facebook;
-      state.socials.twitter = value.payload.twitter;
-      state.socials.instegram = value.payload.instegram;
+    updateSocials: (state, values) => {
+      state.socials.address = values.payload.address;
+      state.socials.linkedIn = values.payload.linkedIn;
+      state.socials.facebook = values.payload.facebook;
+      state.socials.twitter = values.payload.twitter;
+      state.socials.instegram = values.payload.instegram;
     },
+
+    updateUser: (state, values) =>{
+      if( values.payload.email === state.profile.email && values.payload.password == state.profile.password){
+        state.user.email = values.payload.email;
+        state.user.password = values.payload.password;
+      }
+    }
   },
 });
 
-export const { update, updateSocials } = ProfileSlice.actions;
+export const { update, updateSocials, updateUser } = ProfileSlice.actions;
 export const selectProfile = (state) => state.profile.profile;
 export const selectSocials = (state) => state.profile.socials;
+export const selectUser = (state) => state.profile.user;
 export default ProfileSlice.reducer;

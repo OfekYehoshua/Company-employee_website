@@ -18,18 +18,9 @@ import CommentIcon from "@mui/icons-material/Comment";
 import SendIcon from "@mui/icons-material/Send";
 import { FixedSizeList } from "react-window";
 import { useState } from "react";
-
-function renderRow(props) {
-  const { index, style } = props;
-
-  return (
-    <ListItem style={style} key={index} component="div" disablePadding>
-      <ListItemButton>
-        <ListItemText primary={`Itemx ${index + 1}`} />
-      </ListItemButton>
-    </ListItem>
-  );
-}
+import "./style.css";
+import { selectProfile } from "../../ProfileSlice";
+import { useSelector } from "react-redux";
 
 const Comment = (props) => {
   return (
@@ -68,35 +59,15 @@ const Blog = () => {
     setComment(copy);
   };
 
+  const values = useSelector(selectProfile);
+
   return (
-    <Box
-      sx={{
-        width: 400,
-        height: "100%",
-        backgroundColor: "info.light",
-        borderRadius: "12px",
-      }}
-    >
-      <Box
-        sx={{
-          marginLeft: "20px",
-          width: "100%",
-          maxWidth: 360,
-          bgcolor: "background.paper",
-        }}
-      >
-        <List
-          sx={{
-            width: "100%",
-            maxWidth: 360,
-            overflow: "auto",
-            maxHeight: 300,
-            bgcolor: "background.paper",
-          }}
-        >
+    <Box className="blog-container backgroung-brown">
+      <Box className="blog">
+        <List className="comments-container">
           <Comment
             alt="Remy Sharp"
-            src="/static/images/avatar/1.jpg"
+            src="https://www.aceshowbiz.com/images/photo/gary_oldman.jpg"
             userName="Remy Sharp"
             subject="Brunch this weekend?"
             date="17:13"
@@ -104,7 +75,7 @@ const Blog = () => {
           <Divider variant="inset" component="li" />
           <Comment
             alt="Travis Howard"
-            src="/static/images/avatar/2.jpg"
+            src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
             userName="Travis Howard"
             subject="Wish I could come, but I'm out of town this…"
             date="17:23"
@@ -112,50 +83,58 @@ const Blog = () => {
           <Divider variant="inset" component="li" />
           <Comment
             alt="Cindy Baker"
-            src="/static/images/avatar/3.jpg"
+            src="https://t3.ftcdn.net/jpg/03/17/23/90/360_F_317239009_UW4LCUmTHOxYyH4W9RHTIsslLygTonc9.jpg"
             userName="Cindy Baker"
             subject="Anyone saw the new shop downsters???"
             date="18:43"
           />
           {comments.map((comment) => {
             return (
-              <Comment
-                alt="Cindy Baker"
-                src="/static/images/avatar/3.jpg"
-                userName="Cindy Baker"
-                subject={comment}
-                date={today.getHours() + ":" + today.getMinutes()}
-              />
+              <div>
+                <Divider variant="inset" component="li" />
+                <Comment
+                  alt="Cindy Baker"
+                  src={values.photo}
+                  userName={values.firstName + " " + values.lastName}
+                  subject={comment}
+                  date={today.getHours() + ":" + today.getMinutes()}
+                />
+              </div>
             );
           })}
         </List>
-        <FormControl variant="standard">
-          <InputLabel htmlFor="input-with-icon-adornment">Comment</InputLabel>
+        <FormControl className="add-comment-container" variant="standard">
+          <InputLabel
+            className="comment-lable"
+            htmlFor="input-with-icon-adornment"
+          ></InputLabel>
           <Input
-            sx={{ height: 40 }}
+            sx={{ height: 40, marginLeft: 3, marginRight: 3 }}
             id="input-with-icon-adornment"
             placeholder="Message"
+            onChange={(e) => setChange(e.target.value)}
             startAdornment={
               <InputAdornment position="start">
                 <Avatar
                   alt="Cindy Baker"
-                  src="/static/images/avatar/3.jpg"
+                  src={values.photo}
                   sx={{ height: 33, width: 33, marginBottom: 0.5 }}
-                />
+                  />
               </InputAdornment>
             }
-            onChange={(e) => setChange(e.target.value)}
+            endAdornment={
+              <InputAdornment position="end">
+                <Button
+                variant="text"
+                onClick={() => {
+                  handelChange(change);
+                }}>
+            <SendIcon/>
+          </Button>
+                </InputAdornment>
+            }
           />
         </FormControl>
-        <Button
-          sx={{ marginTop: 2 }}
-          variant="text"
-          onClick={() => {
-            handelChange(change);
-          }}
-        >
-          <SendIcon />
-        </Button>
       </Box>
     </Box>
   );

@@ -34,7 +34,6 @@ const NameAndEdit = (props) => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  
   const dispatch = useDispatch();
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -42,11 +41,12 @@ const NameAndEdit = (props) => {
     const socialData = new FormData(event.currentTarget);
     const socials = {
       address: socialData.get("address"),
-      linkedIn: socialData.get("LinkedIn"),
-      facebook: socialData.get("Facebook"),
-      twitter: socialData.get("Twitter"),
-      instegram: socialData.get("Instegram"),
+      linkedIn: socialData.get("linkedIn"),
+      facebook: socialData.get("facebook"),
+      twitter: socialData.get("twitter"),
+      instegram: socialData.get("instegram"),
     };
+    console.log(socials);
     dispatch(updateSocials(socials));
   };
 
@@ -73,48 +73,63 @@ const NameAndEdit = (props) => {
               Change your details
             </Typography>
             <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-              <Grid container spacing={2}>
-                <Grid item xs={12} sm={6}>
-                  <LocationOnIcon className="input-social-icon" />
-                  <TextField name="address" id="outlined-basic" label="Address" variant="outlined" />
+              <Box component="form" noValidate onSubmit={handleSubmit}>
+                <Grid container spacing={2}>
+                  <Grid item xs={12} sm={6}>
+                    <LocationOnIcon className="input-social-icon" />
+                    <TextField
+                      name="address"
+                      id="outlined-basic"
+                      label="Address"
+                      variant="outlined"
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={6}>
+                    <LinkedInIcon className="input-social-icon" />
+                    <TextField
+                      name="linkedIn"
+                      id="outlined-basic"
+                      label="LinkedIn"
+                      variant="outlined"
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={6}>
+                    <FacebookIcon className="input-social-icon" />
+                    <TextField
+                      name="facebook"
+                      id="outlined-basic"
+                      label="Facebook"
+                      variant="outlined"
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={6}>
+                    <TwitterIcon className="input-social-icon" />
+                    <TextField
+                      name="twitter"
+                      id="outlined-basic"
+                      label="Twitter"
+                      variant="outlined"
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={6}>
+                    <InstagramIcon className="input-social-icon" />
+                    <TextField
+                      name="instegram"
+                      id="outlined-basic"
+                      label="Instegram"
+                      variant="outlined"
+                    />
+                  </Grid>
                 </Grid>
-                <Grid item xs={12} sm={6}>
-                  <LinkedInIcon className="input-social-icon" />
-                  <TextField
-                    id="LinkedIn"
-                    label="LinkedIn"
-                    variant="outlined"
-                  />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  <FacebookIcon className="input-social-icon" />
-                  <TextField
-                    id="Facebook"
-                    label="Facebook"
-                    variant="outlined"
-                  />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  <TwitterIcon className="input-social-icon" />
-                  <TextField id="Twitter" label="Twitter" variant="outlined" />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  <InstagramIcon className="input-social-icon" />
-                  <TextField
-                    id="Instegram"
-                    label="Instegram"
-                    variant="outlined"
-                  />
-                </Grid>
-              </Grid>
-              <div className="update-btn-container">
-                <Button className="update-btn" onClick={handleSubmit}>
-                  Aplly
-                </Button>
-                <Button className="update-btn" onClick={handleSubmit}>
-                  ok
-                </Button>
-              </div>
+                <div className="update-btn-container">
+                  <Button className="update-btn" type="submit">
+                    Aplly
+                  </Button>
+                  <Button className="update-btn" type="submit">
+                    ok
+                  </Button>
+                </div>
+              </Box>
             </Typography>
           </Box>
         </Fade>
