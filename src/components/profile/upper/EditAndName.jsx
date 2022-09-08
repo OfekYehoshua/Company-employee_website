@@ -5,16 +5,17 @@ import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { useState } from "react";
 import { TextField, Grid } from "@mui/material";
 
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import { updateSocials } from "../../ProfileSlice";
+import FacebookIcon from "@mui/icons-material/Facebook";
 import { useDispatch } from "react-redux";
+import { useState } from "react";
+
+import { updateSocials } from "../../../ProfileSlice";
 
 const style = {
   position: "absolute",
@@ -33,20 +34,20 @@ const NameAndEdit = (props) => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  
   const dispatch = useDispatch();
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    const values = {
-      Address: data.get("Address"),
-      LinkedIn: data.get("LinkedIn"),
-      Facebook: data.get("Facebook"),
-      Twitter: data.get("Twitter"),
-      Instegram: data.get("Instegram"),
-    };
-    dispatch(updateSocials(values));
     handleClose();
+    const socialData = new FormData(event.currentTarget);
+    const socials = {
+      address: socialData.get("address"),
+      linkedIn: socialData.get("LinkedIn"),
+      facebook: socialData.get("Facebook"),
+      twitter: socialData.get("Twitter"),
+      instegram: socialData.get("Instegram"),
+    };
+    dispatch(updateSocials(socials));
   };
 
   return (
@@ -75,7 +76,7 @@ const NameAndEdit = (props) => {
               <Grid container spacing={2}>
                 <Grid item xs={12} sm={6}>
                   <LocationOnIcon className="input-social-icon" />
-                  <TextField id="Address" label="Address" variant="outlined" />
+                  <TextField name="address" id="outlined-basic" label="Address" variant="outlined" />
                 </Grid>
                 <Grid item xs={12} sm={6}>
                   <LinkedInIcon className="input-social-icon" />
@@ -107,10 +108,10 @@ const NameAndEdit = (props) => {
                 </Grid>
               </Grid>
               <div className="update-btn-container">
-                <Button className="update-btn" onClick={() => handleSubmit()}>
+                <Button className="update-btn" onClick={handleSubmit}>
                   Aplly
                 </Button>
-                <Button className="update-btn" onClick={() => handleSubmit()}>
+                <Button className="update-btn" onClick={handleSubmit}>
                   ok
                 </Button>
               </div>

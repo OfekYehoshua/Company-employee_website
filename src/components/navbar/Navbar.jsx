@@ -17,7 +17,7 @@ import "./navbar.css"
 
 
 const pages = ['/', '/archive'];
-const settings = ['/Profile', '/Account', '/Dashboard', '/Logout'];
+const settings = ['/Profile', '/Archive', '/Logout'];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -135,7 +135,7 @@ const ResponsiveAppBar = () => {
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, mr: 2, color: 'white', display: 'block', backgroundColor: '#6f1d1b'}}
                 >
-                  <Link to="/signin"  className="link">Log-in</Link>
+                  <Link to="/login"  className="link">Log-in</Link>
               </Button>
               <Button
                   key="Sign-up"
