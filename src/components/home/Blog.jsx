@@ -61,7 +61,6 @@ const Blog = () => {
   let today = new Date();
   const [change, setChange] = useState("");
   const [comments, setComment] = useState([]);
-  console.log(comments);
 
   const handelChange = (par) => {
     let copy = [...comments];

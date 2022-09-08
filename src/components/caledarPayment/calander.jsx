@@ -4,19 +4,26 @@ import TextField from '@mui/material/TextField';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { StaticDatePicker } from '@mui/x-date-pickers/StaticDatePicker';
-import "./calander.css";
+import "./calendar.css";
 import Modal from './ModalCalendar';
 
 
 
 export default function ActionBarComponentProps() {
   const [value, setValue] = React.useState(() => dayjs('2022-02-01T00:00'));
+<<<<<<< HEAD:src/components/calander.jsx
 // console.log(value.$D, value.$M, value.$y)  
 
 return (
   
   <div className='calandercss'>
     <LocalizationProvider dateAdapter={AdapterDayjs}>
+=======
+
+return (
+  <div className='calendarcss'>
+    <LocalizationProvider className="calendar" dateAdapter={AdapterDayjs}>
+>>>>>>> 243c58fa727adca39bebb2c39e768609b68851a2:src/components/caledarPayment/calander.jsx
       <StaticDatePicker
         onChange={(newValue) => setValue(newValue)}
         value={value}

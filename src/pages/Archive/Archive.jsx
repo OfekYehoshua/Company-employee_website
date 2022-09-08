@@ -1,4 +1,5 @@
-import ResponsiveAppBar from "../components/Navbar"
+
+import ResponsiveAppBar from "../../components/navbar/Navbar"
 
 const Archive = () => {
     return(

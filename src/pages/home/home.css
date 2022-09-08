@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
+
+* {
+  font-family: "Oswald", sans-serif;
+  color: #6f1d1b;
+}
+#graph {
+  height: 50%;
+  width: 50%;
+  display: flex;
+}
+.home {
+  margin-top: 68px;
+  background: #ece9e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffffff,
+    #ece9e6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #ece9e6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.imgAndCard {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.card {
+  width: 30%;
+}
+.calendarAndBlog {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+.calendar {
+  margin-top: 20px;
+}
+#head {
+  background-image: url("https://api.time.com/wp-content/uploads/2021/02/laptop-home-office.jpg?quality=85&w=2121");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70vh;
+}
+#h1 {
+    color: #6f1d1b;
+  font-size: 60px;
+  margin-top: 0px;
+}
+#quote {
+  color: #99582a;
+  font-size: 75px;
+  line-height: 74px;
+  font-weight: 700;
+  margin: 0 5px 24px;
+  float: left;
+  margin: 0 5px 24px;
+  padding: 25px;
+  font-family: "Oswald", sans-serif !important;
+}
+#punchline {
+  color: #99582a;
+  font-size: 75px;
+  line-height: 74px;
+  font-weight: 700;
+  margin: 0 5px 24px;
+  float: left;
+  padding: 10px;
+  margin: 0 5px 24px;
+  font-family: "Oswald", sans-serif !important;
+}
+#name {
+    color: #99582a;
+  font-size: 25px;
+  height: 0vh;
+  padding-top: 49vh;
+  font-family: "Oswald", sans-serif !important;
+}
+#archive{
+    height: 30vh;
+    width: 30vw;
+}
+#boxArchive{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://s3-us-east-2.amazonaws.com/maryville/wp-content/uploads/2020/06/10142726/archives-pic-1.jpg");
+}
+#explainArchive{
+    font-size: 30px;
+    font-weight: 700;
+}

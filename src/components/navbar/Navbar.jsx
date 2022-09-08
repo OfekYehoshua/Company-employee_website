@@ -13,11 +13,11 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from "react-router-dom"
-import "./style.css"
+import "./navbar.css"
 
 
 const pages = ['/', '/archive'];
-const settings = ['/Profile', '/Account', '/Dashboard', '/Logout'];
+const settings = ['/Profile', '/Archive', '/Logout'];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -39,9 +39,9 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="static" className='nav'>
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
+    <AppBar position="static" className='nav' style={{backgroundColor:'#99582a'}}>
+      <Container maxWidth="xl" className='nav2' >
+        <Toolbar disableGutters style={{color:'#ffe6a7'}}>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
@@ -54,7 +54,7 @@ const ResponsiveAppBar = () => {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: '#ffe6a7',
               textDecoration: 'none',
             }}
           >
@@ -133,14 +133,14 @@ const ResponsiveAppBar = () => {
               <Button
                   key="Log-in"
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, mr: 2, color: 'white', display: 'block', backgroundColor: 'primary.dark'}}
+                  sx={{ my: 2, mr: 2, color: 'white', display: 'block', backgroundColor: '#6f1d1b'}}
                 >
-                  <Link to="/signin"  className="link">Log-in</Link>
+                  <Link to="/login"  className="link">Log-in</Link>
               </Button>
               <Button
                   key="Sign-up"
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, mr: 2, color: 'white', display: 'block', backgroundColor: 'primary.dark' }}
+                  sx={{ my: 2, mr: 2, color: 'white', display: 'block', backgroundColor: '#6f1d1b' }}
                 >
                   <Link to="/signup"  className="link">Sign-up</Link>
               </Button>
