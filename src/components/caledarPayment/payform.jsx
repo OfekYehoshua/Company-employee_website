@@ -1,10 +1,22 @@
 import { Formik } from "formik";
+import { useState } from "react";
 import * as Yup from "yup"
 import './payform.css'
+import AlertPayment from "./AlertPayment";
 
+
+const Show = () => {
+  const [alert,setalert] = useState(false)
+  setalert(!alert) 
+
+  return(
+  <AlertPayment/>
+  )}
 
 
 const PaymentForm = ({props, day , mounth , year,}) => {
+    // const [alert,setalert] = useState(false)
+    // const show = () => setalert(!alert)
     const day1= day
     const mounth1= mounth
     const year1= year
@@ -98,7 +110,7 @@ const PaymentForm = ({props, day , mounth , year,}) => {
             ></input>
             <p style={{color:'red'}}>{errors.date && touched.date&& errors.date}</p>
             
-            <button type="submit" className="subbtn" onSubmit={()=>console.log("asd")}>submit</button>
+            <button type="submit" className="subbtn" onSubmit={ ()=> Show }>submit</button>
           </form>
         )}
       </Formik>
