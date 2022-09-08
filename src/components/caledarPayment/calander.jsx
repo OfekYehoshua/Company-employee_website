@@ -11,7 +11,6 @@ import Modal from './ModalCalendar';
 
 export default function ActionBarComponentProps() {
   const [value, setValue] = React.useState(() => dayjs('2022-02-01T00:00'));
-console.log(value.$D, value.$M, value.$y)  
 
 return (
   <div className='calendarcss'>
