@@ -1,0 +1,20 @@
+.ArchiveTitle{
+    text-align: center;
+    text-decoration:  underline;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    
+    
+}
+.SearchBox{
+    justify-content: center;
+    margin-left: 37%;
+    margin-bottom: 10%;
+}
+
+.Cardscss{
+    display: grid;
+    grid-template-columns: repeat(autofill, minmax(150px, 1ifr));
+    gap: 3rem;
+}
+

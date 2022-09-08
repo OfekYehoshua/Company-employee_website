@@ -5,24 +5,24 @@ import './payform.css'
 import AlertPayment from "./AlertPayment";
 
 
-const Show = () => {
-  const [alert,setalert] = useState(false)
-  setalert(!alert) 
-
-  return(
-  <AlertPayment/>
-  )}
-
 
 const PaymentForm = ({props, day , mounth , year,}) => {
-    // const [alert,setalert] = useState(false)
-    // const show = () => setalert(!alert)
+ 
+  const [alert,setalert] = useState(false)
+  
+  const Show = () => {
+    console.log(alert)
+    setalert(!alert) 
+  
+  }
+
     const day1= day
     const mounth1= mounth
     const year1= year
     const schem =Yup.object().shape({
     cardNumber: Yup.string()
-    .min(16, "must be at-list 16 digits")
+    .min(16, "must be 16 digits")
+    .max(16, "must be 16 digits")
     .required("you must enter a card number"),
     
     
@@ -46,7 +46,7 @@ const PaymentForm = ({props, day , mounth , year,}) => {
          validationSchema={schem}
       >
         {({handleSubmit, handleChange, handleBlur, values, errors, touched}) => (
-          <form action="" onSubmit={handleSubmit} >
+          <form action="" onSubmit={(e) => { e.preventDefault(); handleSubmit(); Show() } } >
             <select className="select"
         name="selectFnc"
         value={values.selectFnc}
@@ -109,12 +109,11 @@ const PaymentForm = ({props, day , mounth , year,}) => {
               onBlur={handleBlur}
             ></input>
             <p style={{color:'red'}}>{errors.date && touched.date&& errors.date}</p>
-            
-            <button type="submit" className="subbtn" onSubmit={ ()=> Show }>submit</button>
+            <button type="submit" className="subbtn" >submit</button>
           </form>
         )}
       </Formik>
-     
+     {alert ? <AlertPayment/> : null}
     </div>
   );
 };
