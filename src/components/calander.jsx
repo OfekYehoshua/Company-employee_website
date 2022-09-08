@@ -11,9 +11,11 @@ import Modal from './ModalCalendar';
 
 export default function ActionBarComponentProps() {
   const [value, setValue] = React.useState(() => dayjs('2022-02-01T00:00'));
-console.log(value.$D, value.$M, value.$y)  
+// console.log(value.$D, value.$M, value.$y)  
 
 return (
+  
+  <div className='calandercss'>
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <StaticDatePicker
         onChange={(newValue) => setValue(newValue)}
@@ -31,7 +33,7 @@ return (
         <Modal day={value.$D} mounth={value.$M+1} year={value.$y}/>,
       </div>
     </LocalizationProvider>
-    
+    </div>
   );
 }
  

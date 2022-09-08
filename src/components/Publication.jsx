@@ -11,13 +11,16 @@ export default function MultiActionAreaCard() {
             <Grid item xs={3}>
                 <TransitionsModal/>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item x={3}>
                 <TransitionsModal/>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item x={3}>
                 <TransitionsModal/>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item x={3}>
+                <TransitionsModal/>
+            </Grid>
+            <Grid item x={3}>
                 <TransitionsModal/>
             </Grid>
         </Grid>

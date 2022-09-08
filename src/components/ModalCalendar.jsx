@@ -48,7 +48,7 @@ export default function Modal1({day, mounth, year}) {
               The date you've selected:
             </Typography>
             <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-              <PaymentForm day={day} mounth={mounth} year={year}/>
+                <PaymentForm day={day} mounth={mounth} year={year}/>
             </Typography>
           </Box>
         </Fade>

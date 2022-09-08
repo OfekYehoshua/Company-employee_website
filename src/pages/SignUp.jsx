@@ -15,9 +15,22 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "./signup.css";
 import { useDispatch } from 'react-redux';
 import {update} from '../ProfileSlice'
+import { useFormik } from 'formik'
 
 
 function Copyright(props) {
+  const validate = values => {
+    const errors = {}
+
+    if (!values.firstName) {
+      errors.firstName = 'Required'
+    } else if (values.firstName.length < 4) {
+      errors.firstName = 'Must be 5 characters or more'
+    }
+    return errors
+  }
+
+
   return (
     <Typography
       variant="body2"
@@ -90,6 +103,7 @@ dispatch(update(values))
                   label="First Name"
                   autoFocus
                 />
+             
               </Grid>
               <Grid item xs={12} sm={6}>
                 <TextField
