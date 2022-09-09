@@ -4,11 +4,7 @@
   font-family: "Oswald", sans-serif;
   color: #6f1d1b;
 }
-#graph {
-  height: 50%;
-  width: 50%;
-  display: flex;
-}
+
 .home {
   margin-top: 68px;
   background: #ece9e6; /* fallback for old browsers */
@@ -16,21 +12,43 @@
     to right,
     #ffffff,
     #ece9e6
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #ffffff,
-    #ece9e6
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #ffffff,
+      #ece9e6
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-.imgAndCard {
+
+.img-card-container{
+  background-color: white;
+}
+
+.img-card {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-.card {
-  width: 30%;
+
+#graph {
+display: flex;
+box-shadow: 0px 0px 10px 0px rgba(210, 198, 198, 0.25) ;
+margin-bottom: 30px; 
+border-radius: 12px;
 }
+
+.pulications-title{
+  margin-top: 100px;
+  margin-bottom: 70px;
+  font-size: 40px;
+}
+
+.events-title{
+  margin-top: 100px;
+  margin-bottom: 10px;
+  font-size: 60px;
+}
+
 .calendarAndBlog {
   display: flex;
   justify-content: space-between;
@@ -39,6 +57,7 @@
 }
 .calendar {
   margin-top: 20px;
+
 }
 #head {
   background-image: url("https://api.time.com/wp-content/uploads/2021/02/laptop-home-office.jpg?quality=85&w=2121");
@@ -48,10 +67,11 @@
   display: flex;
   flex-direction: column;
 }
-#h1 {
+#welcome {
   color: #6f1d1b;
   font-size: 60px;
-  margin-top: 0px;
+  margin: 0;
+  padding: 30px;
 }
 #quote {
   color: #6f1d1b;
@@ -80,24 +100,51 @@
   -webkit-text-stroke-color: black;
   margin-left: 400px;
 }
+
 #name {
   color: #99582a;
   font-size: 25px;
 }
-#archive {
-  height: 30vh;
-  width: 30vw;
-}
+
+
 #boxArchive {
   display: flex;
   flex-direction: column;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("https://s3-us-east-2.amazonaws.com/maryville/wp-content/uploads/2020/06/10142726/archives-pic-1.jpg");
+  height: 380px;
 }
-#boxArchive :hover {
+
+#archive :hover {
   transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   color: #ffe6a7;
+}
+
+
+.archive-img{
+  position: relative;
+  animation-duration: 0.6s;
+}
+
+.archive-img:hover{
+  animation: mymove  1s ;
+
+}
+
+@keyframes mymove {
+  from {top: 0px;}
+  to {top: 20px;}
+}
+
+#explainArchive{
+  margin-top: 80px;
+  margin-bottom: 0;
+}
+
+#archive {
+  height: 30vh;
+  width: 30vw;
 }
 
 @media only screen and (max-width: 1167px) {
