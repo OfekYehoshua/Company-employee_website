@@ -1,0 +1,176 @@
+.collabs-container{
+    padding-right: 6rem;
+    margin-left: 9rem;
+}
+
+.page-background{
+    height: 100px ;
+    background-color: #ffe6a7;
+}
+
+.brands-line{
+    height: 100px;
+    max-width: 1280px;
+    
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    align-items: center !important;
+    flex-wrap: wrap;
+}
+
+.brand-container{
+    width: 126px;
+    height: 25px;
+    margin: 10px;
+    fill: rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+}
+
+.brand-container:hover{
+    fill: rgb(97, 97, 97);
+}
+
+
+
+.footer-background{
+    background-color: #6f1d1b;
+}
+
+.footer-container{
+   margin: 0 130px 0 130px;
+}
+
+.footer-title{
+    padding-right: 64px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    margin-top: 30px;  
+}
+
+.footer-description{
+    padding-right: 64px;
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: rgb(251, 253, 255);
+}
+
+.sign-up-container{
+    padding-left: 12px;
+}
+
+.email-input-container{
+    background: rgb(255, 255, 255);
+    cursor: text;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    padding: 12px;
+    border: 2px solid rgb(229, 232, 235);
+    color: rgb(4, 17, 29);
+    height: 48px;
+    font-size: 16px;
+}
+
+.email-input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.sign-up-btn {
+    margin: 0px 8px 8px;
+    height: 50px;
+    width: 132px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #99582a !important;
+    border: 2px solid #99582a !important;
+    color: rgb(255, 255, 255) !important;
+}
+
+.sign-up-btn:hover{
+    filter: brightness(1.1);
+    border: 0px !important;
+    transition: all 0.2s ease 0s;
+    box-shadow: rgb(0 0 0 / 10%) 0px 2px 10px;
+}
+
+.footer-btns:active{
+    border-color: rgb(24, 104, 183);
+    box-shadow: none;
+}
+
+.commmunity-title{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    margin-top: 57px;  
+}
+
+.community-ref-container{
+    margin-right: 12px;
+    width: 54px;
+    height: 54px;
+    margin-top: 8px;
+    border-radius: 12px;
+    letter-spacing: 0.01em;
+    padding: 13.8px 10px;
+    background-color: #99582a;
+    border: 2px solid #99582a;
+    color: rgb(255, 255, 255);
+}
+
+.community-ref-container:hover{
+    filter: brightness(1.1);
+    transition: all 0.2s ease 0s;
+    box-shadow: rgb(0 0 0 / 10%) 0px 2px 10px;
+}
+
+.community-ref-container:active{
+    box-shadow: none;
+}
+
+.community-ref{
+    cursor:pointer;
+    height: 20px;
+    width: 30px;
+}
+
+.icon-sizing{
+    margin-left: 3px;
+    height: 25px;
+}
+
+.seperating-line{
+    color: #ffe6a7;
+}
+
+.copyrights{
+    text-align: start;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+}
+
+.legal-refs-container{
+    text-align: end;
+}
+
+.legal-refs{
+    color: rgb(251, 253, 255);
+    margin-top: 0px;
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.legal-refs:hover{
+    font-weight: 500;
+    color: rgb(251, 253, 255);
+}

@@ -129,8 +129,8 @@ const Blog = () => {
                 onClick={() => {
                   handelChange(change);
                 }}>
-            <SendIcon/>
-          </Button>
+                <SendIcon/>
+                </Button>
                 </InputAdornment>
             }
           />
