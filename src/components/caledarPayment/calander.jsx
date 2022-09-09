@@ -13,7 +13,7 @@ export default function ActionBarComponentProps() {
   const [value, setValue] = React.useState(() => dayjs('2022-02-01T00:00'));
 
 return (
-  <div className='calendarcss'>
+  <div className='calendar-container '>
     <LocalizationProvider className="calendar" dateAdapter={AdapterDayjs}>
       <StaticDatePicker
         onChange={(newValue) => setValue(newValue)}

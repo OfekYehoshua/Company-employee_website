@@ -1,5 +1,8 @@
-.calendarcss{
-    height: 10%;
-    width: 20%;
-    
+.calendar-container{
+    width: 400px;
+    height: 900px;
+    min-height: 10px;
+    max-height: 400px;
+    background-color: aqua;
 }
+

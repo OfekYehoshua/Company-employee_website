@@ -22,6 +22,7 @@ const style = {
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
+   
 };
 
 export default function ArchiveCards(props) {
@@ -31,7 +32,7 @@ export default function ArchiveCards(props) {
 
   return (
     <div>
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345, minWidth:200 ,flexDirection:'column'}}>
       <CardActionArea>
         <CardMedia
           component={props.component}

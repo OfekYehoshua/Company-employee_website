@@ -1,20 +1,41 @@
 .ArchiveTitle{
     text-align: center;
     text-decoration:  underline;
-    margin-bottom: 5%;
     margin-top: 5%;
-    
-    
+    font-size: 3.5rem;
 }
 .SearchBox{
     justify-content: center;
-    margin-left: 37%;
-    margin-bottom: 10%;
+    margin-left: 38%;
+    margin-bottom: 5%;
+
+    
 }
 
 .Cardscss{
     display: grid;
     grid-template-columns: repeat(autofill, minmax(150px, 1ifr));
     gap: 3rem;
+}
+
+.archivefotter{
+    height: 70vh;
+    background: hsla(0, 0%, 100%, 1);
+
+    background: linear-gradient(0deg, hsla(0, 0%, 100%, 1) 0%, hsla(30, 95%, 46%, 1) 0%, hsla(30, 82%, 54%, 1) 15%, hsla(30, 33%, 98%, 1) 100%);
+    
+    background: -moz-linear-gradient(0deg, hsla(0, 0%, 100%, 1) 0%, hsla(30, 95%, 46%, 1) 0%, hsla(30, 82%, 54%, 1) 15%, hsla(30, 33%, 98%, 1) 100%);
+    
+    background: -webkit-linear-gradient(0deg, hsla(0, 0%, 100%, 1) 0%, hsla(30, 95%, 46%, 1) 0%, hsla(30, 82%, 54%, 1) 15%, hsla(30, 33%, 98%, 1) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#E77606", GradientType=1 );
+}
+
+.archive{
+    justify-content: center;
+}
+
+.cards{
+    height: 50vh;
 }
 
