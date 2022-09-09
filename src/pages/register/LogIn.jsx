@@ -15,8 +15,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import "./login.css"
 import ResponsiveAppBar from "../../components/navbar/Navbar";
 
-import { selectUser, updateUser } from "../../ProfileSlice"
-import { useDispatch, useSelector } from 'react-redux';
+import { updateUser } from "../../ProfileSlice"
+import { useDispatch } from 'react-redux';
 
 function Copyright(props) {
   return (
@@ -35,8 +35,6 @@ const theme = createTheme();
 
 export default function LogIn() {
   
-  const x = useSelector(selectUser)
-
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -45,7 +43,6 @@ export default function LogIn() {
       password: data.get('password'),
     };
     dispatch(updateUser(user))
-    console.log(x)
   };
   const dispatch = useDispatch()
   

@@ -2,7 +2,7 @@
 import ResponsiveAppBar from "../../components/navbar/Navbar"
 import MultiActionAreaCard from "../../components/home/Publication"
 import Blog from "../../components/home/Blog"
-import ActionBarComponentProps from "../../components/caledarPayment/calander"
+import ActionBarComponentProps from "../../components/caledarPayment/Calendar"
 import Aboutcard from "../../components/home/Aboutcard"
 import FolderList from "../../components/home/FolderList"
 import "./home.css"

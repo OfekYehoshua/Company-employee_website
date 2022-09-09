@@ -97,7 +97,7 @@ const Blog = () => {
                   src={values.photo}
                   userName={values.firstName + " " + values.lastName}
                   subject={comment}
-                  date={today.getHours() + ":" + today.getMinutes()}
+                  date={today.getHours() + ":" + (today.getMinutes() < 10 ? "0" + today.getMinutes() : today.getMinutes())}
                 />
               </div>
             );
