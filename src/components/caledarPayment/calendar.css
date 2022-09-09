@@ -3,3 +3,12 @@
     width: 20%;
     
 }
+@media only screen and (max-width: 764px) {
+.calendarcss{
+    height: 10%;
+    width: 0;
+    margin-right: 70vw;
+    margin-top: 5vh;
+    
+}
+}

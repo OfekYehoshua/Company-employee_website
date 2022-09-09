@@ -16,8 +16,8 @@ const Home = () => {
             <ResponsiveAppBar/>
             <div id="head">
                 <p id="quote">"Coming together is a beginning. Keeping together is progress.</p>
-                <p id="punchline"> Working together is success."</p>
-                <p id="name">-Henry Ford</p>
+                <p id="punchline"> Working together is success." <span id="name">-Henry Ford</span></p>
+                
             </div>
             <Typography><h1 id="h1">Welcom to our employee web!</h1></Typography> 
             <div className="imgAndCard">
@@ -31,8 +31,8 @@ const Home = () => {
                 <Blog></Blog>
             </div>
             <div id="boxArchive">
-                <h1 id="explainArchive" className="effect" >TO ARCHIVE</h1>
-                <Link to="/archive" className="effect">
+                <h1 id="explainArchive" >TO ARCHIVE</h1>
+                <Link to="/archive">
                 <ArchiveIcon id="archive">
                 </ArchiveIcon>
                 </Link>
