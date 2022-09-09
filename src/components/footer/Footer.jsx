@@ -76,7 +76,7 @@ const Footer = () => {
             <Grid item xs={6}>
               <p className="copyrights">© 2018 - 2022 Ozone Networks, Inc</p>
             </Grid>
-            <Grid item item xs={6} className="col pe-0 legal-refs-container">
+            <Grid item xs={6} className="col pe-0 legal-refs-container">
               <a className="legal-refs" href="/">Privecy Policy</a>
               <a className="legal-refs" href="/">Terns of Service</a>
             </Grid>
