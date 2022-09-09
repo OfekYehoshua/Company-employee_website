@@ -45,6 +45,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 70vh;
+  display: flex;
+  flex-direction: column;
 }
 #h1 {
   color: #6f1d1b;
@@ -63,13 +65,14 @@
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
   margin-left: 240px;
+  display: inline;
 }
 #punchline {
   color: #6f1d1b;
   font-size: 75px;
   line-height: 74px;
   font-weight: 700;
-  margin: 0 5px 24px;
+  margin-top: -5vh;
   float: left;
   padding: 10px;
   font-family: "Dancing Script", cursive;
@@ -80,8 +83,6 @@
 #name {
   color: #99582a;
   font-size: 25px;
-  height: 0vh;
-  padding-top: 49vh;
 }
 #archive {
   height: 30vh;
@@ -99,5 +100,48 @@
   color: #ffe6a7;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1167px) {
+  #quote {
+    font-size: 50px;
+    margin-left: 240px;
+  }
+}
+#punchline {
+  font-size: 50px;
+}
+@media only screen and (max-width: 874px) {
+  #quote {
+    font-size: 50px;
+    margin-left: 100px;
+    line-height: 50px;
+    text-align: match-parent;
+  }
+  #punchline {
+    font-size: 50px;
+    margin-left: 100px;
+    line-height: 50px;
+    text-align: left;
+  }
+}
+@media only screen and (max-width: 764px) {
+  #quote {
+    font-size: 50px;
+    margin-left: 10vw;
+    padding: 20px;
+  }
+  #punchline {
+    font-size: 50px;
+    margin-left: 10vw;
+    padding: 20px;
+  }
+  #head {
+    background-image: url("https://img.freepik.com/free-photo/flat-lay-photo-office-desk-with-laptop-copy-space-background_1150-45597.jpg?w=2000");
+    height: 70vh;
+  }
+  .card {
+  }
+  .calendarAndBlog {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }

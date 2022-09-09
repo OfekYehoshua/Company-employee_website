@@ -7,19 +7,16 @@ import Avatar from '@mui/material/Avatar';
 import ImageIcon from '@mui/icons-material/Image';
 import WorkIcon from '@mui/icons-material/Work';
 import BeachAccessIcon from '@mui/icons-material/BeachAccess';
-import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
-import ThreeDRotation from '@mui/icons-material/ThreeDRotation';
-import ArchiveIcon from '@mui/icons-material/Archive';
-
+import './style.css'
 
 
 
 export default function FolderList() {
   return (
     
-    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }} className='folderListContainer'>
       <h1>choose event </h1>
-      <ListItem>
+      <ListItem className='folderListContainer'>
         <ListItemAvatar>
           <Avatar>
             <ImageIcon />
