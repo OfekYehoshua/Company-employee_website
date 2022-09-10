@@ -15,11 +15,16 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
+  width: 800,
+  minHeight: 300,
+  // maxHeight: 500,
+  color: "black",
+  bgcolor: "#ffe6a7",
+  border: "2px solid #ffe6a7",
   boxShadow: 24,
   p: 4,
+  borderRadius: 10,
+
 };
 
 export default function TransitionsModal(props) {
@@ -29,7 +34,7 @@ export default function TransitionsModal(props) {
 
   return (
     <div>
-        <Card sx={{ maxWidth: 345 , maxHeight: 400, height:"70vh"}}>
+        <Card className="card-container">
       <CardActionArea>
         <CardMedia
           component="img"
@@ -39,11 +44,11 @@ export default function TransitionsModal(props) {
           onClick={handleOpen}
         />
         <CardContent
-            onClick={handleOpen}>
-          <Typography gutterBottom variant="h5" component="div">
+            onClick={handleOpen} className="card-content">
+          <Typography className="card-title" gutterBottom variant="h5" component="div">
             {props.title}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body2" color="text.secondary" className="description">
           {props.description}
 
           </Typography>
@@ -60,12 +65,12 @@ export default function TransitionsModal(props) {
         }}
       >
         <Fade in={open}>
-          <Box sx={style}>
+          <Box className="modal-container" sx={style}>
             <Typography id="transition-modal-title" variant="h6" component="h2">
-              Title
+              {props.title}
             </Typography>
-            <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-              Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+            <Typography id="transition-modal-description" className="modal-description">
+            {props.modalDescription}
             </Typography>
           </Box>
         </Fade>

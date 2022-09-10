@@ -1,14 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
-.container{
+
+.login-container{
     font-family: "Dancing Script", cursive;
-    color: #6f1d1b !important;
-   
+    color: #6f1d1b !important;   
 }
 
 .theme{
     background: #abbaab !important;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #ffffff, #abbaab) !important;  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #ffffff, #abbaab) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #ffffff, #abbaab) !important;  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffffff, #abbaab) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
+.links{
+    justify-content: space-between;
+}
+
+.forgot-password{
+    margin-left: 30px;
+}
+
+.have-account{
+    margin-right: 20px;
 }

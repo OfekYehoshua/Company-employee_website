@@ -12,13 +12,15 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AnimationIcon from "@mui/icons-material/Animation";
+import AdbIcon from '@mui/icons-material/Adb';
+
 import { Link } from "react-router-dom";
 import "./navbar.css";
-import { useSelector } from "react-redux";
-import { selectUser, selectProfile } from "../../ProfileSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { selectUser, selectProfile, logout } from "../../ProfileSlice";
 
 const pages = ["/", "/archive"];
-const settings = ["/Profile", "/Archive", "/Logout"];
+const settings = ["/Profile", "/Archive"];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -39,8 +41,14 @@ const ResponsiveAppBar = () => {
     setAnchorElUser(null);
   };
 
+  const handleLogout = () => {
+    dispatch(logout());
+    handleCloseUserMenu();
+  };
+
   const user = useSelector(selectUser);
   const profile = useSelector(selectProfile);
+  const dispatch = useDispatch();
 
   return (
     <AppBar
@@ -54,8 +62,6 @@ const ResponsiveAppBar = () => {
           <Typography
             variant="h6"
             noWrap
-            component="a"
-            href="/"
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
@@ -102,19 +108,16 @@ const ResponsiveAppBar = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Link to={page} className="link">
+                  <Link to={page} className="menu-link">
                     {page == "/" ? "home" : page.slice(1)}
                   </Link>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          {/* <AnimationIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
           <Typography
             variant="h5"
             noWrap
-            component="a"
-            href=""
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
@@ -210,6 +213,11 @@ const ResponsiveAppBar = () => {
                   </Link>
                 </MenuItem>
               ))}
+              <MenuItem key="/Logout" onClick={handleLogout}>
+                <Link to="/" className="setting-links">
+                  Logout
+                </Link>
+              </MenuItem>
             </Menu>
           </Box>
         </Toolbar>

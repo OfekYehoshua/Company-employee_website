@@ -23,8 +23,8 @@ export const ProfileSlice = createSlice({
     },
 
     user: {
-      email: "",
-      password: ""
+      email: "amio121212@gmail.com",
+      password: "1234"
     }
   },
 
@@ -51,16 +51,21 @@ export const ProfileSlice = createSlice({
       state.socials.instegram = values.payload.instegram;
     },
 
-    updateUser: (state, values) =>{
+    updateUser: (state, values) => {
       if( values.payload.email === state.profile.email && values.payload.password == state.profile.password){
         state.user.email = values.payload.email;
         state.user.password = values.payload.password;
       }
+    },
+
+    logout: (state) => {
+      state.user.email = ""
+      state.user.password = ""
     }
   },
 });
 
-export const { update, updateSocials, updateUser } = ProfileSlice.actions;
+export const { update, updateSocials, updateUser, logout } = ProfileSlice.actions;
 export const selectProfile = (state) => state.profile.profile;
 export const selectSocials = (state) => state.profile.socials;
 export const selectUser = (state) => state.profile.user;
