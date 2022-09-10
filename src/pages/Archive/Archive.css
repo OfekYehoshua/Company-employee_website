@@ -22,17 +22,18 @@
     height: 70vh;
     background: hsla(0, 0%, 100%, 1);
 
-    background: linear-gradient(0deg, hsla(0, 0%, 100%, 1) 0%, hsla(30, 95%, 46%, 1) 0%, hsla(30, 82%, 54%, 1) 15%, hsla(30, 33%, 98%, 1) 100%);
+    background: linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(30, 95%, 46%, 1) 0%, hsla(30, 82%, 54%, 1) 15%, hsla(30, 33%, 98%, 1) 100%);
     
-    background: -moz-linear-gradient(0deg, hsla(0, 0%, 100%, 1) 0%, hsla(30, 95%, 46%, 1) 0%, hsla(30, 82%, 54%, 1) 15%, hsla(30, 33%, 98%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(30, 95%, 46%, 1) 0%, hsla(30, 82%, 54%, 1) 15%, hsla(30, 33%, 98%, 1) 100%);
     
-    background: -webkit-linear-gradient(0deg, hsla(0, 0%, 100%, 1) 0%, hsla(30, 95%, 46%, 1) 0%, hsla(30, 82%, 54%, 1) 15%, hsla(30, 33%, 98%, 1) 100%);
+    background: -webkit-linear-gradient(90deg,hsla(0, 0%, 100%, 1) 0%,hsla(30, 95%, 46%, 1) 0%, hsla(30, 82%, 54%, 1) 15%, hsla(30, 33%, 98%, 1) 100%);
     
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#E77606", GradientType=1 );
 }
 
 .archive{
     justify-content: center;
+
 }
 
 .cards{

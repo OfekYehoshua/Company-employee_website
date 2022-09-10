@@ -2,15 +2,13 @@
 import ResponsiveAppBar from "../../components/navbar/Navbar"
 import MultiActionAreaCard from "../../components/home/Publication"
 import Blog from "../../components/home/Blog"
-import ActionBarComponentProps from "../../components/caledarPayment/calander"
+import ActionBarComponentProps from "../../components/caledarPayment/Calendar"
 import Aboutcard from "../../components/home/Aboutcard"
 import FolderList from "../../components/home/FolderList"
-
-
 import "./home.css"
-
 import { Typography } from "@mui/material"
 import ArchiveIcon from '@mui/icons-material/Archive';
+import { Link } from "react-router-dom"
 
 const Home = () => {
     return(
@@ -18,8 +16,8 @@ const Home = () => {
             <ResponsiveAppBar/>
             <div id="head">
                 <p id="quote">"Coming together is a beginning. Keeping together is progress.</p>
-                <p id="punchline"> Working together is success."</p>
-                <p id="name">-Henry Ford</p>
+                <p id="punchline"> Working together is success." <span id="name">-Henry Ford</span></p>
+                
             </div>
             <Typography><h1 id="h1">Welcom to our employee web!</h1></Typography> 
             <div className="imgAndCard">
@@ -28,13 +26,21 @@ const Home = () => {
             </div>
             <MultiActionAreaCard/>
             <div className="calendarAndBlog">
-                <ActionBarComponentProps className="calendar"></ActionBarComponentProps>
+                <div className="calendar">
+                <ActionBarComponentProps></ActionBarComponentProps>
+                </div>
+                <dive className="folderlist">
                 <FolderList></FolderList>
+                </dive>
                 <Blog></Blog>
             </div>
             <div id="boxArchive">
-                <p id="explainArchive">TO ARCHIVE</p>
-                <ArchiveIcon id="archive"></ArchiveIcon>
+                <h1 id="explainArchive" >TO ARCHIVE</h1>
+                <Link to="/archive">
+                <ArchiveIcon id="archive">
+                </ArchiveIcon>
+                </Link>
+
             </div>
             
         </div>

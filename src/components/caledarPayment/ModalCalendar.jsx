@@ -1,15 +1,12 @@
-
 import * as React from 'react';
-import "./Modal.css";
+import "./modalCalendar.css";
 import PaymentForm from "./payform";
-
 import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-
 
 
 const style = {
@@ -31,7 +28,7 @@ export default function Modal1({day, mounth, year}) {
 
   return (
     <div className="popup">
-      <Button onClick={handleOpen}>payment</Button>
+      <Button onClick={handleOpen} className="paybtn">payment</Button>
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -41,6 +38,7 @@ export default function Modal1({day, mounth, year}) {
         BackdropComponent={Backdrop}
         BackdropProps={{
           timeout: 500,
+        
         }}
       >
         <Fade in={open}>
@@ -49,7 +47,7 @@ export default function Modal1({day, mounth, year}) {
               The date you've selected:
             </Typography>
             <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-                <PaymentForm day={day} mounth={mounth} year={year}/>
+                <PaymentForm  day={day} mounth={mounth} year={year}/>
             </Typography>
           </Box>
         </Fade>

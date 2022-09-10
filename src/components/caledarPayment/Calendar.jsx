@@ -21,7 +21,7 @@ return (
         renderInput={(params) => <TextField {...params} />}
         componentsProps={{
           actionBar: {
-            actions: ['today'],
+            actions: [''],
 
           },
         }

@@ -1,8 +1,19 @@
 .calendar-container{
-    width: 400px;
-    height: 900px;
-    min-height: 10px;
+    width: 350px;
     max-height: 400px;
-    background-color: aqua;
+    border-radius: 8px !important;
+    max-width: 350px;
+    min-height: 400px !important;
 }
-
+.calendar{
+    border-radius: 8px !important;
+}
+@media only screen and (max-width: 764px) {
+.calendarcss{
+    height: 10%;
+    width: 0;
+    margin-right: 70vw;
+    margin-top: 5vh;
+    
+}
+}

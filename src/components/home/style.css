@@ -76,7 +76,25 @@
   .backgroung-creme{
     background-color: #ffe6a7;
   }
+h1{
+  margin: 2.5%;
+}
 
-.blog-container{
+@media only screen and (max-width: 764px) {
+.folderListContainer{
+  margin-top: 5vh !important;
+  
+}
+.publicationContainer{
+  font-size: small;
+}
+.font{
+
+  
+}
+.fort#description{ display: none !important;} 
+.gridSize{
 
 }
+}
+
