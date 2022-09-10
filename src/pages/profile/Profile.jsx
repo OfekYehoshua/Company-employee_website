@@ -30,17 +30,13 @@ const Profile = () => {
   const values = useSelector(selectProfile)
   const socials = useSelector(selectSocials)
   
-  console.log(socials)
   let linkedinCopy = socials.linkedIn && socials.linkedIn.slice(28).replace(/[0-9]/g, '')
-
-  // const [social, setSocial] = useState([])
-
 
   return (
     <div>
       <ResponsiveAppBar />
       <div>
-        <Banner src="https://thumbs.dreamstime.com/b/green-nature-banner-spring-sommer-content-183216944.jpg"/>
+        <Banner src={"https://thumbs.dreamstime.com/b/green-nature-banner-spring-sommer-content-183216944.jpg"}/>
         <ProfilePic src={values.photo} />
         <NameAndEdit profileName={values.firstName + " " + values.lastName}/>
         <p className="profile-details">Advisor and consultant at DosimPro</p>
@@ -53,7 +49,7 @@ const Profile = () => {
         </div>
       </div>
       <div className="body-profile">
-      <Grid container={12} className="">
+      <Grid container className="">
         <Grid className="">
             <WorkerDetails detail={values.phone} icon={<PhoneIcon className="details-icon"/>}/>
             <WorkerDetails detail={values.email} icon={<EmailIcon className="details-icon"/>}/>

@@ -1,11 +1,11 @@
 import Avatar from "@mui/material/Avatar";
 import "./profilePic.css"
 
-const ProfilePic = () => {
+const ProfilePic = (props) => {
     return(
         <div className="container">
             <div className="profile-pic-container background-creme">
-                <Avatar className="profile-pic" alt="Remy Sharp" src="https://i0.wp.com/newdoorfiji.com/wp-content/uploads/2018/03/profile-img-1.jpg?ssl=1"/>
+                <Avatar className="profile-pic" alt="Remy Sharp" src={props.src}/>
             </div>
         </div>
     )
