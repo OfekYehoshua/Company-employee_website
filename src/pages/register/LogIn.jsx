@@ -49,8 +49,8 @@ export default function LogIn() {
   return (
     <div>
     <ResponsiveAppBar/>
-    <ThemeProvider theme={theme} className="container">
-      <Grid container component="main" sx={{ height: '100vh' }}>
+    <ThemeProvider theme={theme} className="login-container">
+      <Grid container className="login-container" component="main" sx={{ height: '100vh' }}>
         <CssBaseline className="theme" />
         <Grid
           item
@@ -65,7 +65,7 @@ export default function LogIn() {
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
-        />
+          />
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square className='theme'>
           <Box 
             sx={{
@@ -74,6 +74,7 @@ export default function LogIn() {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
+              marginTop: 21
             }}
           >
             <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }} style={{backgroundColor:"#99582a"}}>
@@ -117,17 +118,17 @@ export default function LogIn() {
               >
                 Sign In
               </Button>
-              <Grid container>
-                <Grid item xs>
+              <Grid container className='links'>
+                <Grid item className='forgot-password'>
                   <Link to="/" variant="body2">
                     Forgot password?
                   </Link>
                 </Grid>
-                <Grid item>
+                <Grid item className='have-account'>
                 <Link to="/signup">Don't have an account? Sign Up</Link>
                 </Grid>
               </Grid>
-              <Copyright sx={{ mt: 5 }} />
+              <Copyright sx={{ mt: 7 }} />
             </Box>
           </Box>
         </Grid>
