@@ -7,6 +7,8 @@ import Avatar from '@mui/material/Avatar';
 import ImageIcon from '@mui/icons-material/Image';
 import WorkIcon from '@mui/icons-material/Work';
 import BeachAccessIcon from '@mui/icons-material/BeachAccess';
+import CakeIcon from '@mui/icons-material/Cake';
+
 import './style.css'
 
 
@@ -22,7 +24,7 @@ export default function FolderList() {
             <ImageIcon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary="Happy Hour" secondary="Jan 9, 2014" />
+        <ListItemText primary="Happy Hour" secondary="Jan 9, 2023" />
       </ListItem>
       <ListItem>
         <ListItemAvatar>
@@ -30,7 +32,7 @@ export default function FolderList() {
             <WorkIcon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary="Meeting" secondary="Jan 7, 2014" />
+        <ListItemText primary="Meeting night" secondary="Jan 7, 2023" />
       </ListItem>
       <ListItem>
         <ListItemAvatar>
@@ -38,23 +40,23 @@ export default function FolderList() {
             <BeachAccessIcon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary="Vacation" secondary="July 20, 2014" />
+        <ListItemText primary="Company Vacation" secondary="July 20, 2023" />
       </ListItem>
       <ListItem>
         <ListItemAvatar>
           <Avatar>
-            <ImageIcon />
+            <BeachAccessIcon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary="Interview" secondary="Jan 9, 2014" />
+        <ListItemText primary="Family vacation" secondary="Jan 9, 2023" />
       </ListItem>
       <ListItem>
         <ListItemAvatar>
           <Avatar>
-            <ImageIcon />
+            <CakeIcon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary="Birthday party" secondary="Jan 9, 2014" />
+        <ListItemText primary="Birthday party" secondary="Jan 14, 2023" />
       </ListItem>
     </List>
    

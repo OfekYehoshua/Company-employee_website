@@ -1,6 +1,5 @@
 import "./profile.css";
 import ResponsiveAppBar from "../../components/navbar/Navbar";
-import Banner from "../../components/profile/upper/Banner";
 import ProfilePic from "../../components/profile/upper/ProfilePic";
 import WorkerDetails from "../../components/profile/middle/WorkerDetail";
 import Feedbacks from "../../components/profile/middle/Feedbacks";
@@ -33,36 +32,32 @@ const Profile = () => {
   let linkedinCopy = socials.linkedIn && socials.linkedIn.slice(28).replace(/[0-9]/g, '')
 
   return (
-    <div>
+    <div className="profile-container">
       <ResponsiveAppBar />
-      <div>
-        <Banner src={"https://thumbs.dreamstime.com/b/green-nature-banner-spring-sommer-content-183216944.jpg"}/>
+      <div >
+        <img className="banner" src="https://thumbs.dreamstime.com/b/green-nature-banner-spring-sommer-content-183216944.jpg" alt="profile" />
         <ProfilePic src={values.photo} />
         <NameAndEdit profileName={values.firstName + " " + values.lastName}/>
         <p className="profile-details">Advisor and consultant at DosimPro</p>
         <div className="socials-container">
-            <Socials detail={socials.address} icon={<LocationOnIcon className="details-icon"/>} className="location"/>
-            <Socials detail={socials.facebook && socials.facebook.slice(25)} icon={<FacebookIcon className="details-icon"/>} href={socials.linkedIn}/>
-            <Socials detail={linkedinCopy && linkedinCopy.slice(0, -2)} icon={<LinkedInIcon className="details-icon"/>} href={socials.facebook}/>
-            <Socials detail={socials.twitter && socials.twitter.slice(20)} icon={<TwitterIcon className="details-icon"/>} href={socials.twitter}/>
-            <Socials detail={socials.instegram && socials.instegram.slice(26)} icon={<InstagramIcon className="details-icon"/>} href={socials.instegram}/>
+            <Socials detail={socials.address} icon={<LocationOnIcon className="social-icon"/>} className="location"/>
+            <Socials detail={socials.facebook && socials.facebook.slice(25)} icon={<FacebookIcon className="social-icon"/>} href={socials.linkedIn}/>
+            <Socials detail={linkedinCopy && linkedinCopy.slice(0, -2)} icon={<LinkedInIcon className="social-icon"/>} href={socials.facebook}/>
+            <Socials detail={socials.twitter && socials.twitter.slice(20)} icon={<TwitterIcon className="social-icon"/>} href={socials.twitter}/>
+            <Socials detail={socials.instegram && socials.instegram.slice(26)} icon={<InstagramIcon className="social-icon"/>} href={socials.instegram}/>
         </div>
       </div>
       <div className="body-profile">
-      <Grid container className="">
-        <Grid className="">
-            <WorkerDetails detail={values.phone} icon={<PhoneIcon className="details-icon"/>}/>
-            <WorkerDetails detail={values.email} icon={<EmailIcon className="details-icon"/>}/>
-            <WorkerDetails detail={values.date} icon={<CakeIcon className="details-icon"/>}/>
-            <WorkerDetails detail={values.rule} icon={<WorkIcon className="details-icon"/>}/>
+        <Grid container >
+          <Grid item xs={2}>
+              <WorkerDetails detail={values.email} icon={<EmailIcon className="details-icon"/>}/>
+              <WorkerDetails detail={values.date} icon={<CakeIcon className="details-icon"/>}/>
+              <WorkerDetails detail={values.rule} icon={<WorkIcon className="details-icon"/>}/>
+          </Grid>
+          <Grid item xs={8}>
+              <Feedbacks/>
+          </Grid>
         </Grid>
-        <Grid className="">
-            <Feedbacks></Feedbacks>
-        </Grid>
-        <Grid className="">
-
-        </Grid>
-      </Grid>
       </div>
     </div>
   );
