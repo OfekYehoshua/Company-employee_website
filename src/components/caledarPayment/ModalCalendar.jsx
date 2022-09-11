@@ -7,6 +7,7 @@ import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import MewPaymentForm from './NewPayForm';
 
 
 const style = {
@@ -47,7 +48,11 @@ export default function Modal1({day, mounth, year}) {
               The date you've selected:
             </Typography>
             <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-                <PaymentForm  day={day} mounth={mounth} year={year}/>
+                {/* <PaymentForm  day={day} mounth={mounth} year={year}/> */}
+                <h3 className="date1">
+                {day}.{mounth}.{year}
+                </h3>,
+              <MewPaymentForm/>
             </Typography>
           </Box>
         </Fade>

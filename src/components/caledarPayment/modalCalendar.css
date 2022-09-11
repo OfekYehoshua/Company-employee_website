@@ -28,7 +28,7 @@ body.active-modal {
 .modal-content {
     position: absolute;
     top: 40%;
-    left: 50%;
+    left: 40%;
     transform: translate(-50%, -50%);
     line-height: 1.4;
     background:#ffe6a7;
@@ -81,14 +81,14 @@ body.active-modal {
      color: white !important;
 }
 
-.date{
+.date1{
     justify-content: center !important;
+    position: relative;
+    left: 60px;
 
 }
 
-#transition-modal-description{
-    margin-left: 5vw;
-}
+
 
 @media only screen and (max-width: 764px) {
     .paybtn{

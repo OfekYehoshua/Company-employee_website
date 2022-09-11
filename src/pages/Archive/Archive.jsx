@@ -4,7 +4,6 @@ import './Archive.css';
 
 import data from './TemplteData.json'
  
-
 function ArchiveMain() {
   const [searchTerm, setSearchTerm] = useState("");
   return (
