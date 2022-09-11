@@ -1,42 +1,159 @@
-.ArchiveTitle{
-    text-align: center;
-    text-decoration:  underline;
-    margin-top: 5%;
-    font-size: 3.5rem;
-}
-.SearchBox{
-    justify-content: center;
-    margin-left: 38%;
-    margin-bottom: 5%;
 
+ .templateContainer{
+     margin: 5% 0;
+ }
+ .searchInput_Container{
+     align-items: center;
+     justify-content: center;
+     margin: 0 auto;
     
-}
+     margin-bottom: 5vh;
+ }
+ 
+ .templateContainer > .searchInput_Container input{
+     width: 100vw;
+     padding: 10px;
+     outline: none;
+     
+ }
+ .templateContainer .template_Container{
+     display: flex;
+     flex-direction: column;
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(50px, 280px));
+     gap: 1.2rem;
+     margin-left: 4vw;
+     max-width: 95vw;
+     max-height: 5vh !important;
+     box-shadow: black 2px;
+ 
+ }
+ .templateContainer .template_Container .template{
+     background-color: white;
+     margin: 30px;
+     padding: 0px 20px;
+   
+   
+     
+     
+ } 
+ .templateContainer .template_Container .template img{
+    
+ }
+ 
+ #searchInput{
+     border-radius:  6px;
+     width: 20vw;
+ }
+ 
+ .template{
+  text-align: center;
+  justify-content: center;
+    color: #99582a;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ }
+ 
+ .cardsdiv{
+     justify-content: center !important;
+     /* border: black solid; */
+     border-radius: 8px;
+     max-height: 330px;
+     box-shadow: 0.5px 0.5px 5px 0.5px  #cbcbcb;
+     
+    
+ }
+ 
+ img{
+     max-width: 280px;
+     max-height: 155px;
+     min-height: 155px;
+     min-width: 280px;
+     position: relative;
+     right: 50px;
+     bottom: 6vh;
+     border-radius: 8px;
+ }
+ 
+ h3{
+      /* text-decoration: underline;  */
+ }
+ 
+ .popup{
+     border-color: saddlebrown;
+     border-radius: 6px;
+     width: 100px;
+ }
+ 
+ .imgdiv{
+     height: 140px;
+     
+ }
 
-.Cardscss{
-    display: grid;
-    grid-template-columns: repeat(autofill, minmax(150px, 1ifr));
-    gap: 3rem;
-}
 
-.archivefotter{
-    height: 70vh;
+ .archivefotter{
+    height: min-content;
+    min-height: fit-content;
     background: hsla(0, 0%, 100%, 1);
+    margin-top: 200vh;
+    margin-bottom: 0%;
+    
+    
 
-    background: linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(30, 95%, 46%, 1) 0%, hsla(30, 82%, 54%, 1) 15%, hsla(30, 33%, 98%, 1) 100%);
-    
-    background: -moz-linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(30, 95%, 46%, 1) 0%, hsla(30, 82%, 54%, 1) 15%, hsla(30, 33%, 98%, 1) 100%);
-    
-    background: -webkit-linear-gradient(90deg,hsla(0, 0%, 100%, 1) 0%,hsla(30, 95%, 46%, 1) 0%, hsla(30, 82%, 54%, 1) 15%, hsla(30, 33%, 98%, 1) 100%);
-    
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#E77606", GradientType=1 );
+
+background: linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(30, 95%, 46%, 1) 0%, hsla(30, 82%, 54%, 1) 0%, hsla(0, 0%, 100%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(30, 95%, 46%, 1) 0%, hsla(30, 82%, 54%, 1) 0%, hsla(0, 0%, 100%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(30, 95%, 46%, 1) 0%, hsla(30, 82%, 54%, 1) 0%, hsla(0, 0%, 100%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#e77606", GradientType=1 );
+justify-content: end !important;
+}
+@media only screen and (max-width: 920px) {
+    .archivefotter {
+     margin-top: 350vh;
+    }
+}
+@media only screen and (max-width: 615px) {
+    .archivefotter {
+        margin-top: 550vh;
+       }
+   }
+@media only screen and (max-width: 400px) {
+    .archivefotter {
+        margin-top: 520vh;
+        
+       }
+   }
+
+.footerbuttom{
+    padding-bottom: 20vh;
+    margin-bottom: 0%;
 }
 
-.archive{
-    justify-content: center;
-
+.footertop{
+    padding-top: 20vh;
 }
 
-.cards{
-    height: 50vh;
+.ArchiveTitle{
+    margin-top: 100px;
+    font-size: 2.3rem;
 }
 
+.ArchiveTitle2{
+    margin: 0%;
+}
+
+.filebtn{
+    width: 80px;
+    height: 30px;
+    border-radius: 6px;
+    background-color: #ab5f19;
+    color: white;
+    border-color: #ab5f19;
+    position: relative; left: 40px;
+}
+
+.filebtn:hover{
+    opacity: 80%;
+}
