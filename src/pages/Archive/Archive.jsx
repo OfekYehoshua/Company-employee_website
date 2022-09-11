@@ -33,7 +33,7 @@ function ArchiveMain() {
                   <div className="cardsdiv">
                   <div className="template" key={val.id}>
                     <div className="imgdiv">
-                      <img src={val.image} alt="" />
+                      <img src={val.image} alt="" className="image"/>
                       </div>
                       <h3>{val.title}</h3>
                       <p className="desctiption">{val.description}</p>
@@ -46,7 +46,6 @@ function ArchiveMain() {
               })
           }
       </div>
-        
       </div>
       <div className="archivefotter">
            <p>
@@ -54,7 +53,7 @@ function ArchiveMain() {
            <br/>it is the courage to countinue that counts.</h1>
            <h3 className="footerbuttom">winston churchill</h3>
            </p>
-          </div>
+      </div>
     </>
   )
 }
