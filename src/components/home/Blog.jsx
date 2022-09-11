@@ -22,7 +22,7 @@ import "./style.css";
 import { selectProfile } from "../../ProfileSlice";
 import { useSelector } from "react-redux";
 
-const Comment = (props) => {
+export const Comment = (props) => {
   return (
     <ListItem alignItems="flex-start">
       <ListItemAvatar>

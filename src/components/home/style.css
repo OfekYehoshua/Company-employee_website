@@ -57,35 +57,32 @@
     color: #99582a;
   }
   
-  .bordo{
-    color: #6f1d1b;
-  }
-  
-  .creme{
-    color: #ffe6a7;
-  }
-  
-  .backgroung-brown{
-    background-color: #99582a;
-  }
-  
-  .backgroung-bordo{
-    background-color: #6f1d1b;
-  }
-  
-  .backgroung-creme{
-    background-color: #ffe6a7;
-  }
+.bordo{
+  color: #6f1d1b;
+}
+
+.creme{
+  color: #ffe6a7;
+}
+
+.backgroung-brown{
+  background-color: #99582a;
+}
+
+.backgroung-bordo{
+  background-color: #6f1d1b;
+}
+
+.backgroung-creme{
+  background-color: #ffe6a7;
+}
+
 h1{
   margin: 2.5%;
 }
 
 @media only screen and (max-width: 764px) {
-.folderListContainer{
-  margin-top: 5vh !important;
 
-  
-}
 .publicationContainer{
   font-size: small;
 }
