@@ -57,7 +57,7 @@ const Home = () => {
           Keeping you updated - All the latest news!
         </h1>
       </Typography>
-      <MultiActionAreaCard />
+        <MultiActionAreaCard />
       <Typography>
         <h1 className="events-title">Company's events</h1>
       </Typography>
@@ -67,9 +67,6 @@ const Home = () => {
         </div>
         <div data-aos="zoom-in" className="folderlist">
           <FolderList/>
-        </div>
-        <div  data-aos="zoom-in-left">
-          <Blog/>
         </div>
       </div>
       <div id="boxArchive">
