@@ -156,6 +156,7 @@ const ResponsiveAppBar = () => {
   const dispatch = useDispatch();
 
   return (
+    <Box>
     <AppBar
       open={open}
       className="nav"
@@ -342,7 +343,13 @@ const ResponsiveAppBar = () => {
       </Container>
     </AppBar>
 
-    {/* <Drawer variant="permanent" open={open}>
+    
+    </Box>
+  );
+};
+export default ResponsiveAppBar;
+
+{/* <Drawer variant="permanent" open={open}>
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
@@ -422,7 +429,3 @@ const ResponsiveAppBar = () => {
         </FormControl>
 
       </Drawer> */}
-    </Box>
-  );
-};
-export default ResponsiveAppBar;

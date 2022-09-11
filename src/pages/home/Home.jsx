@@ -4,7 +4,7 @@ import Blog from "../../components/home/Blog";
 import ActionBarComponentProps from "../../components/caledarPayment/Calendar";
 import Aboutcard from "../../components/home/Aboutcard";
 import FolderList from "../../components/home/FolderList";
-import Collabs from "../../components/footer/Page9";
+import Collabs from "../../components/footer/collabs";
 import Footer from "../../components/footer/Footer";
 import "./home.css";
 import { Typography } from "@mui/material";
@@ -26,7 +26,6 @@ const Home = () => {
           "Coming together is a beginning. Keeping together is progress.
         </p>
         <p id="punchline">
-          {" "}
           Working together is success." <span id="name">-Henry Ford</span>
         </p>
       </div>
@@ -61,19 +60,19 @@ const Home = () => {
       <Typography>
         <h1 className="events-title">Company's events</h1>
       </Typography>
-      <div className="calendarAndBlog">
+      <div className="calendar-and-blog">
         <div data-aos="zoom-in-right" className="calendar">
           <ActionBarComponentProps/>
         </div>
-        <div data-aos="zoom-in" className="folderlist">
+        <div data-aos="zoom-in" className="events-list">
           <FolderList/>
         </div>
         <div data-aos="zoom-in-left">
         <Blog/>
         </div>
       </div>
-      <div id="boxArchive">
-        <h1 id="explainArchive">TO ARCHIVE</h1>
+      <div id="box-archive">
+        <h1 id="explain-archive">TO ARCHIVE</h1>
         <div className="archive-img">
           <Link to="/archive">
             <ArchiveIcon id="archive" />
