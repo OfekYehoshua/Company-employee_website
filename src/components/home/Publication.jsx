@@ -2,16 +2,29 @@ import Grid from "@mui/material/Unstable_Grid2";
 import TransitionsModal from "./Modal";
 import Container from "@mui/material/Container";
 import "./style.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
+
+
+// import { width } from "@mui/system";
 
 export default function MultiActionAreaCard() {
+  useEffect(()=>{
+      Aos.init({duration: 2000});
+  },[]);
+  // const { innerWidth:width} = window;
+  
   return (
     <Container maxWidth="lg" className="publicationContainer">
-      <Grid container spacing={2}>
+      <Grid container spacing={2}  data-aos="flip-up">
         <Grid item xs={3}>
           <TransitionsModal
             className="font"
             src="https://cxuniversity.com/wp-content/uploads/2018/09/3736-min.jpg"
             title={"The worker of the month"}
+    
             description={
               "A tilte that given to the exceptional worker in the volunteering aspect, doing.."
             }
@@ -20,7 +33,7 @@ export default function MultiActionAreaCard() {
             }
           />
         </Grid>
-        <Grid item xs={3} className="gridSize">
+        <Grid item xs={3} className="gridSize" >
           <TransitionsModal
             className="font"
             src="https://img.huffingtonpost.com/asset/5cd6fd50240000310076eccd.jpeg?ops=1778_1000"

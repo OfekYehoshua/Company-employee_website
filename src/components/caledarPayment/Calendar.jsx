@@ -28,7 +28,7 @@ return (
     }
       />
       <div className='Modal'>
-        <Modal day={value.$D} mounth={value.$M+1} year={value.$y}/>,
+        <Modal day={value.$D} mounth={value.$M+1} year={value.$y}/>
       </div>
     </LocalizationProvider>
     </div>

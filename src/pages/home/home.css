@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+
 * {
   font-family: "Oswald", sans-serif;
   color: #6f1d1b;
@@ -63,7 +64,7 @@ border-radius: 12px;
   padding-left: 1vw;
   padding-right: 1vw;
   padding-bottom: 0%;
-  height: 78.5vh;
+  height: 80vh;
   /* padding-top: 2vh;
   padding-left: 1.2vw; */
   background-color: #99582a  !important;
@@ -81,7 +82,7 @@ border-radius: 12px;
   padding-left: 1vw;
   padding-right: 1vw;
   padding-bottom: 0%;
-  height: 78.5vh;
+  height: 80vh;
   background-color: #99582a  !important;
   border-radius: 8px;
   left: 20vw;
@@ -177,22 +178,11 @@ border-radius: 12px;
   width: 30vw;
 }
 
-@media only screen and (max-width: 1167px) {
-  #quote {
-    font-size: 50px;
-    margin-left: 240px;
-  }
-
-}
 #punchline {
   font-size: 50px;
 }
 
-@media only screen and (max-width: 1240px) {
-  .folderlist{
-    height: 90vh;
-  }
-}
+
 @media only screen and (max-width: 874px) {
   #quote {
     font-size: 50px;
@@ -207,11 +197,15 @@ border-radius: 12px;
     text-align: left;
   }
   .folderlist{
-    width: 50vw;
-    height: 100vh;
+    width: 80vw;
+    height: 60vh;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-left: 3vw;
+padding-right: 3vw;
   }
-}
-@media only screen and (max-width: 764px) {
+
+
   #quote {
     font-size: 50px;
     margin-left: 10vw;
@@ -237,7 +231,7 @@ border-radius: 12px;
     margin-bottom: 20px !important;
     margin-top: 5vh;
     width: 49vw;
-    height: 70vh;
+    height: 55vh;
     padding-top: 2vh;
     padding-left: 1.2vw;
     background-color: #99582a  !important;
@@ -246,12 +240,3 @@ border-radius: 12px;
   }
 }
 
-@media only screen and (max-width: 500px) {
-  .folderlist{
-    width: 73vw;
-    height: 100vh;
-  }
-  .calendar{
-    height: 100vh;
-  }
-}
