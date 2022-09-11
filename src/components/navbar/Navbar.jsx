@@ -342,14 +342,15 @@ const ResponsiveAppBar = () => {
         </Toolbar>
       </Container>
     </AppBar>
-
     
     </Box>
   );
 };
 export default ResponsiveAppBar;
 
+
 {/* <Drawer variant="permanent" open={open}>
+
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
@@ -428,4 +429,6 @@ export default ResponsiveAppBar;
           </div>
         </FormControl>
 
+
       </Drawer> */}
+

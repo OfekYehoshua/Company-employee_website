@@ -1,16 +1,21 @@
 import ResponsiveAppBar from "../../components/navbar/Navbar"
 import React, {useState} from "react";
 import './Archive.css';
-
 import data from './TemplteData.json'
- 
+import { useEffect } from "react";
+import { useLocation } from "react-router";
+
 function ArchiveMain() {
   const [searchTerm, setSearchTerm] = useState("");
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [ResponsiveAppBar]);
   return (
     <>
     <ResponsiveAppBar/>
-    <h1 className="ArchiveTitle">company archive:</h1>
-    <h2 className="ArchiveTitle2">looking for comany data?</h2>
+    <h1 className="ArchiveTitle">The company archive</h1>
+    <h2 className="ArchiveTitle2">looking for company data?</h2>
       <div className="templateContainer">
         <div className="searchInput_Container">
           <input id="searchInput" type="text" placeholder="Search in archive..." onChange={(event) => {

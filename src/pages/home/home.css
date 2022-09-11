@@ -77,6 +77,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  /* width: 90%; */
 }
 
 #graph {
@@ -171,7 +172,6 @@ border-radius: 12px;
   color: #ffe6a7;
 }
 
-
 /*!!!!!!!!!!!!!!!!!!!!  Media 874px  !!!!!!!!!!!!!!!!!!!! */
 @media only screen and (max-width: 874px) {
   #head {
@@ -200,11 +200,16 @@ border-radius: 12px;
   .img-card{
     flex-direction:column-reverse;
   }
-  
+
+  #graph{
+    width: 100%;
+  }
+
   .calendar-and-blog {
     display: flex;
     flex-direction: column-reverse;
   }
+  
   .calendar{
     margin-bottom: 20px !important;
     margin-top: 5vh;

@@ -122,26 +122,31 @@
 
 @media only screen and (max-width: 850px) {
 
-  .publicationContainer{
-    font-size: small;
-  }
-  .card-title{
-    font-size: 100% !important;
-    padding: 0% !important;
-    line-height: 90% !important;
-  }
-  .description{
-    font-size: 0% !important;
-  }
-  .card-content{
-  height: 3vh;
-  }
-  .card-container{
-    height: 30vh;
-  }
-  #tap{
-    font-size: 2vw;
-    padding: 0%;
-  
-  }
+.css-116tyi7{
+  width: 80% !important;
+}
+
+.publicationContainer{
+  font-size: small;
+}
+.card-title{
+  font-size: 100% !important;
+  padding: 0% !important;
+  line-height: 90% !important;
+}
+.description{
+  font-size: 0% !important;
+}
+.card-content{
+height: 3vh;
+}
+.card-container{
+  height: 30vh;
+}
+#tap{
+  font-size: 2vw;
+  padding: 0%;
+ 
+}
+
 }
