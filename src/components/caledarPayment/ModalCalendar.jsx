@@ -22,7 +22,7 @@ const style = {
   p: 4,
 };
 
-export default function Modal1({day, mounth, year}) {
+export default function ModalCalendar({day, mounth, year}) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);

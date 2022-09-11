@@ -14,6 +14,7 @@
      outline: none;
      
  }
+ 
  .templateContainer .template_Container{
      display: flex;
      flex-direction: column;
@@ -26,11 +27,14 @@
      box-shadow: black 2px;
  
  }
+
  .templateContainer .template_Container .template{
      background-color: white;
      margin: 30px;
-     padding: 0px 20px;   
+     padding: 0px 20px;
  } 
+
+
  
  #searchInput{
      border-radius:  6px;
@@ -61,7 +65,7 @@
      bottom: 22%;
      border-radius: 8px;
  }
- 
+
  .imgdiv{
      height: 140px;
  }

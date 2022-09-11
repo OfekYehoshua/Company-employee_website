@@ -32,7 +32,7 @@ function ArchiveMain() {
                   <div className="cardsdiv">
                   <div className="template" key={val.id}>
                     <div className="imgdiv">
-                      <img src={val.image} alt="" className="image"/>
+                      <img className="image" src={val.image} alt="" />
                       </div>
                       <h3>{val.title}</h3>
                       <p className="desctiption">{val.description}</p>

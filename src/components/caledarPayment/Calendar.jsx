@@ -5,8 +5,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { StaticDatePicker } from '@mui/x-date-pickers/StaticDatePicker';
 import "./calendar.css";
-// import Modal from './ModalCalendar';
-import Modal1 from './ModalCalendar';
+import ModalCalendar from './ModalCalendar';
 
 
 
@@ -27,9 +26,10 @@ return (
           },
         }
     }
-      />
+      >
+      </StaticDatePicker>
       <div className='Modal'>
-        <Modal1 day={value.$D} mounth={value.$M+1} year={value.$y}/>
+        <ModalCalendar day={value.$D} mounth={value.$M+1} year={value.$y}/>
       </div>
     </LocalizationProvider>
     </div>

@@ -1,5 +1,4 @@
 .nav{
-    position:fixed !important;
     top: 0;
     z-index: 100;
 }
@@ -16,6 +15,12 @@
 .setting-links{
     color:#6f1d1b;
     text-decoration: none;
+}
+
+.message{
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 

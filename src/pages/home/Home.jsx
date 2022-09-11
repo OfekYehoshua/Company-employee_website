@@ -16,7 +16,7 @@ import { useEffect } from "react";
 
 const Home = () => {
     useEffect(()=>{
-        Aos.init({duration: 2000});
+        Aos.init({duration: 1000});
     },[]);
   return (
     <div className="home">
@@ -57,19 +57,16 @@ const Home = () => {
           Keeping you updated - All the latest news!
         </h1>
       </Typography>
-      <MultiActionAreaCard />
+        <MultiActionAreaCard />
       <Typography>
         <h1 className="events-title">Company's events</h1>
       </Typography>
       <div className="calendarAndBlog">
         <div data-aos="zoom-in-right" className="calendar">
-          <ActionBarComponentProps></ActionBarComponentProps>
+          <ActionBarComponentProps/>
         </div>
         <div data-aos="zoom-in" className="folderlist">
-          <FolderList></FolderList>
-        </div>
-        <div  data-aos="zoom-in-left">
-        <Blog></Blog>
+          <FolderList/>
         </div>
       </div>
       <div id="boxArchive">

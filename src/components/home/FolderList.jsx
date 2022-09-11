@@ -16,9 +16,9 @@ import './style.css'
 export default function FolderList() {
   return (
     
-    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }} className='folderListContainer'>
+    <List sx={{ bgcolor: 'background.paper' }} className='folderListContainer'>
       <h1>choose event </h1>
-      <ListItem className='folderListContainer'>
+      <ListItem className='folder-list'>
         <ListItemAvatar>
           <Avatar>
             <ImageIcon />
@@ -26,7 +26,7 @@ export default function FolderList() {
         </ListItemAvatar>
         <ListItemText primary="Happy Hour" secondary="Jan 9, 2023" />
       </ListItem>
-      <ListItem>
+      <ListItem className='folder-list'>
         <ListItemAvatar>
           <Avatar>
             <WorkIcon />
@@ -34,7 +34,7 @@ export default function FolderList() {
         </ListItemAvatar>
         <ListItemText primary="Meeting night" secondary="Jan 7, 2023" />
       </ListItem>
-      <ListItem>
+      <ListItem className='folder-list'>
         <ListItemAvatar>
           <Avatar>
             <BeachAccessIcon />
@@ -42,7 +42,7 @@ export default function FolderList() {
         </ListItemAvatar>
         <ListItemText primary="Company Vacation" secondary="July 20, 2023" />
       </ListItem>
-      <ListItem>
+      <ListItem className='folder-list'>
         <ListItemAvatar>
           <Avatar>
             <BeachAccessIcon />
@@ -50,7 +50,7 @@ export default function FolderList() {
         </ListItemAvatar>
         <ListItemText primary="Family vacation" secondary="Jan 9, 2023" />
       </ListItem>
-      <ListItem>
+      <ListItem className='folder-list'>
         <ListItemAvatar>
           <Avatar>
             <CakeIcon />
