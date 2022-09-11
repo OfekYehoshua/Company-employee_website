@@ -62,11 +62,11 @@ const Blog = () => {
   const values = useSelector(selectProfile);
 
   return (
-    <Box className="blog-container backgroung-brown">
+    <Box className="blog-container backgroung-brown" >
       <Box className="blog">
         <List className="comments-container">
-          <Comment
-            alt="Remy Sharp"
+          <Comment 
+            alt="Remy Sharp" 
             src="https://www.aceshowbiz.com/images/photo/gary_oldman.jpg"
             userName="Remy Sharp"
             subject="Brunch this weekend?"

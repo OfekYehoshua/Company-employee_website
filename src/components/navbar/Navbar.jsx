@@ -165,7 +165,7 @@ const ResponsiveAppBar = () => {
     >
       <Container maxWidth="xl" className="nav2">
         <Toolbar disableGutters style={{ color: "#ffe6a7" }}>
-          <IconButton
+          {/* <IconButton
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
@@ -176,7 +176,7 @@ const ResponsiveAppBar = () => {
             }}
           >
             <MessageIcon />
-          </IconButton>
+          </IconButton> */}
           <AnimationIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
           <Typography
             variant="h6"
@@ -342,7 +342,7 @@ const ResponsiveAppBar = () => {
         </Toolbar>
       </Container>
     </AppBar>
-    <Drawer variant="permanent" open={open}>
+    {/* <Drawer variant="permanent" open={open}>
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
@@ -420,7 +420,7 @@ const ResponsiveAppBar = () => {
           />
           </div>
         </FormControl>
-      </Drawer>
+      </Drawer> */}
     </Box>
   );
 };
