@@ -16,7 +16,7 @@ import './style.css'
 export default function FolderList() {
   return (
     
-    <List sx={{ bgcolor: 'background.paper' }} className='folderListContainer'>
+    <List sx={{ bgcolor: 'background.paper' }} className='folder-list-container'>
       <h1>choose event </h1>
       <ListItem className='folder-list'>
         <ListItemAvatar>

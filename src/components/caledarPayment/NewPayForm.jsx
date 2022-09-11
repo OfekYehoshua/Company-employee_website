@@ -6,7 +6,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import AlertPayment from "./AlertPayment";
 import { useState } from "react";
-import './NewPayForm.css'
+import './calendar.css'
 import { Formik } from "formik";
 import * as Yup from "yup";
 import Box from "@mui/material/Box";
