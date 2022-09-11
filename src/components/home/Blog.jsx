@@ -53,10 +53,9 @@ const Blog = () => {
   const [change, setChange] = useState("");
   const [comments, setComment] = useState([]);
 
-  const handelSubmit = (event) => {
-    event.preventDefault()
+  const handelSubmit = (par) => {
     let copy = [...comments];
-    copy.push(event);
+    copy.push(par);
     setComment(copy);
   };
 
@@ -104,7 +103,7 @@ const Blog = () => {
             );
           })}
         </List>
-        <form onSubmit={handelSubmit} className="add-comment-container" variant="standard">
+        <FormControl className="add-comment-container" variant="standard">
           <InputLabel
             className="comment-lable"
             htmlFor="input-with-icon-adornment"
@@ -126,15 +125,16 @@ const Blog = () => {
             endAdornment={
               <InputAdornment position="end">
                 <Button
-                type="submit"
                 variant="text"
-                >
+                onClick={() => {
+                  handelSubmit(change);
+                }}>
                 <SendIcon/>
                 </Button>
                 </InputAdornment>
             }
           />
-        </form>
+        </FormControl>
       </Box>
     </Box>
   );
