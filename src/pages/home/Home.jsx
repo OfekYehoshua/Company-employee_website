@@ -63,13 +63,13 @@ const Home = () => {
       </Typography>
       <div className="calendarAndBlog">
         <div data-aos="zoom-in-right" className="calendar">
-          <ActionBarComponentProps></ActionBarComponentProps>
+          <ActionBarComponentProps/>
         </div>
         <div data-aos="zoom-in" className="folderlist">
-          <FolderList></FolderList>
+          <FolderList/>
         </div>
         <div  data-aos="zoom-in-left">
-        <Blog></Blog>
+          <Blog/>
         </div>
       </div>
       <div id="boxArchive">
