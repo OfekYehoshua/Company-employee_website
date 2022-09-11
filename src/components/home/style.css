@@ -76,9 +76,35 @@
   .backgroung-creme{
     background-color: #ffe6a7;
   }
-h1{
-  margin: 2.5%;
-}
+
+  .card-container{
+    max-width: 345px;
+    max-height: 400px;
+    height: 370px;
+  }
+  
+  .card-content{
+    height: 150px;
+  }
+  
+  .modal-description{
+    margin-top: 20px !important;
+  }
+  
+  
+  .effect{
+      box-shadow: inset 0 0 0 0 #6f1d1b;
+      color: #6f1d1b!important;
+      margin: 0 .25rem;
+      padding: 0 .25rem;
+      transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    }
+    .effect:hover {
+      box-shadow: inset 100px 0 0 0 #99582a;
+      color: #ffe6a7;
+    }
+  
+
 
 @media only screen and (max-width: 764px) {
 .folderListContainer{
@@ -89,8 +115,12 @@ h1{
 .publicationContainer{
   font-size: small;
 }
-
-.fort#description{ display: none !important;} 
-
+.card-title{
+  font-size: 100% !important;
+  padding: 0% !important;
+}
+.description{
+  font-size: 0% !important;
+}
 }
 

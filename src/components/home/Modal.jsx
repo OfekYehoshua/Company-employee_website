@@ -8,7 +8,7 @@ import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
-import "./modal.css"
+import "./style.css"
 
 const style = {
   position: "absolute",
