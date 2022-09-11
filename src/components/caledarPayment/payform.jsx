@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import "./payform.css";
 import AlertPayment from "./AlertPayment";
 
+
 const PaymentForm = ({ props, day, mounth, year }) => {
   const [alert, setaAlert] = useState(false);
 
@@ -27,6 +28,10 @@ const PaymentForm = ({ props, day, mounth, year }) => {
       .required("you must enter ccv"),
 
     selectFnc: Yup.string().required("you must select a card provider"),
+
+
+
+    
   });
   return (
     <div className="formik">
@@ -103,11 +108,16 @@ const PaymentForm = ({ props, day, mounth, year }) => {
               submit
             </button>
           </form>
+        
         )}
+        
       </Formik>
+    
       {alert ? <AlertPayment /> : null}
     </div>
+    
   );
 };
 
 export default PaymentForm;
+
