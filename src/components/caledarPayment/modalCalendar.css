@@ -10,14 +10,14 @@
     color: white !important;
 }
 
-.date{
+.date1{
     justify-content: center !important;
+    position: relative;
+    left: 60px;
 
 }
 
-#transition-modal-description{
-    margin-left: 5vw;
-}
+
 
 @media only screen and (max-width: 764px) {
     .paybtn{

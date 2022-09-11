@@ -163,20 +163,18 @@ const ResponsiveAppBar = () => {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters style={{ color: "#ffe6a7" }}>
-          {/* {windoWidth > 768 && 
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              onClick={handleDrawerOpen}
-              edge="start"
-              sx={{
-                marginRight: 5,
-                ...(open && { display: 'none' }),
-              }}
-            >
-              <MessageIcon />
-            </IconButton>
-          } */}
+          {/* <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            onClick={handleDrawerOpen}
+            edge="start"
+            sx={{
+              marginRight: 5,
+              ...(open && { display: 'none' }),
+            }}
+          >
+            <MessageIcon />
+          </IconButton> */}
           <AnimationIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
           <Typography
             variant="h6"
@@ -343,13 +341,8 @@ const ResponsiveAppBar = () => {
         </Toolbar>
       </Container>
     </AppBar>
-  );
-};
-export default ResponsiveAppBar;
 
-
- {/* {windoWidth > 768 && 
-    <Drawer variant="permanent" open={open}>
+    {/* <Drawer variant="permanent" open={open}>
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
@@ -427,5 +420,9 @@ export default ResponsiveAppBar;
           />
           </div>
         </FormControl>
-      </Drawer>
-      } */}
+
+      </Drawer> */}
+    </Box>
+  );
+};
+export default ResponsiveAppBar;
