@@ -7,12 +7,13 @@ const Footer = () => {
   return (
     <div className={`footer-background`}>
       <div className="footer-container">
-        <Grid container>
+        <Grid container className="mailAndSocials">
           <Grid item xs={5}>
             <h2 className="footer-title">Stay in the loop</h2>
             <p className="footer-description">
               Join our mailing list to stay in the loop with our newest events, actions in the society, and tips and tricks for navigating in the organization.
             </p>
+
             <Grid container className="row mb-4 sign-up-container">
               <Grid item xs={8} className="col-8 email-input-container">
                 <input
@@ -32,7 +33,7 @@ const Footer = () => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={7}>
+          <Grid item xs={7} className='social-container'>
             <h2 className="commmunity-title">Keep the hard work!</h2>
             <div className="d-flex">
               <Socials 
