@@ -5,6 +5,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Container from '@mui/material/Container';
 import SearchBoxArchive from "../../components/archive/SearchBoxArchive";
 import { useState } from "react";
+import { margin } from "@mui/system";
             
             
             
@@ -21,6 +22,7 @@ return(
                     <div className="archive">
                             <ResponsiveAppBar/>,
                         <h1 className="ArchiveTitle">company archive:</h1>
+                        <h2>looking for comany data?</h2>
                         <div className="SearchBox">
                         <SearchBoxArchive 
                         onChange={(e)=>setQuery(e.target.value)}
@@ -44,7 +46,7 @@ return(
                         <Container maxWidth="lg" >
                     <Grid container spacing={2}>
                         <Grid item xs={3}>
-                        <ArchiveCards  
+                        <ArchiveCards  className="cards"
                          component="img"
                          height={140}
                          image="https://static1.shine.com/l/m/images/blog/excel_ms.png"
@@ -144,7 +146,7 @@ return(
                        />
                         </Grid>
                     </Grid>
-                </Container>,
+                </Container>
             
                         <Container maxWidth="lg">
                     <Grid container spacing={2}>
@@ -354,7 +356,17 @@ return(
                         </Grid>
                     </Grid>
                 </Container>
+                <div className="archivefotter">
+                  <p>
+                  <h1 style={{lineHeight: 1.25, fontSize: "65px", paddingTop:"10vh",}}>soccess is not final. failur is not fatal.
+                  <br/>it is the courage to countinue that counts.</h1>
+                  <h3>winston churchill</h3>
+                </p>
+                </div>
                     </div>
+                   
+                      
+                    
 
 );
 }

@@ -34,9 +34,13 @@ const Home = () => {
             <MultiActionAreaCard/>
             <Typography><h1 className="events-title">Company's events</h1></Typography> 
             <div className="calendarAndBlog">
-                <ActionBarComponentProps className="calendar"></ActionBarComponentProps>
-                <FolderList/>
-                <Blog/>
+                <div className="calendar">
+                <ActionBarComponentProps></ActionBarComponentProps>
+                </div>
+                <dive className="folderlist">
+                <FolderList></FolderList>
+                </dive>
+                <Blog></Blog>
             </div>
             <div id="boxArchive">
                 <h1 id="explainArchive" >TO ARCHIVE</h1>

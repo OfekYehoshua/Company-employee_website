@@ -30,7 +30,7 @@ const PaymentForm = ({ props, day, mounth, year }) => {
   });
   return (
     <div className="formik">
-      <h3 className="date">
+      <h3 className="date1">
         {day}.{mounth}.{year}
       </h3>
       <h1>payment:</h1>

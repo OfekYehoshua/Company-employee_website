@@ -56,9 +56,39 @@ border-radius: 12px;
   padding: 40px;
 }
 .calendar {
-  margin-top: 20px;
+  margin-bottom: 20px !important;
+  margin-top: 5vh;
+  width: min-content;
+  padding-top: 2vh;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-bottom: 0%;
+  height: 78.5vh;
+  /* padding-top: 2vh;
+  padding-left: 1.2vw; */
+  background-color: #99582a  !important;
+  border-radius: 8px;
+  left: 20vw;
+  min-width: fit-content;
 
 }
+
+.folderlist{
+  margin-bottom: 20px !important;
+  margin-top: 5vh;
+  width: 25vw;
+  padding-top: 2vh;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-bottom: 0%;
+  height: 78.5vh;
+  background-color: #99582a  !important;
+  border-radius: 8px;
+  left: 20vw;
+  min-width: fit-content;
+  min-height: fit-content;
+}
+
 #head {
   background-image: url("https://api.time.com/wp-content/uploads/2021/02/laptop-home-office.jpg?quality=85&w=2121");
   background-repeat: no-repeat;
@@ -152,9 +182,16 @@ border-radius: 12px;
     font-size: 50px;
     margin-left: 240px;
   }
+
 }
 #punchline {
   font-size: 50px;
+}
+
+@media only screen and (max-width: 1240px) {
+  .folderlist{
+    height: 90vh;
+  }
 }
 @media only screen and (max-width: 874px) {
   #quote {
@@ -169,6 +206,10 @@ border-radius: 12px;
     line-height: 50px;
     text-align: left;
   }
+  .folderlist{
+    width: 50vw;
+    height: 100vh;
+  }
 }
 @media only screen and (max-width: 764px) {
   #quote {
@@ -181,6 +222,7 @@ border-radius: 12px;
     margin-left: 10vw;
     padding: 20px;
   }
+  
   #head {
     background-image: url("https://img.freepik.com/free-photo/flat-lay-photo-office-desk-with-laptop-copy-space-background_1150-45597.jpg?w=2000");
     height: 70vh;
@@ -190,5 +232,26 @@ border-radius: 12px;
   .calendarAndBlog {
     display: flex;
     flex-direction: column-reverse;
+  }
+  .calendar{
+    margin-bottom: 20px !important;
+    margin-top: 5vh;
+    width: 49vw;
+    height: 70vh;
+    padding-top: 2vh;
+    padding-left: 1.2vw;
+    background-color: #99582a  !important;
+    border-radius: 8px;
+    left: 20vw;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .folderlist{
+    width: 73vw;
+    height: 100vh;
+  }
+  .calendar{
+    height: 100vh;
   }
 }

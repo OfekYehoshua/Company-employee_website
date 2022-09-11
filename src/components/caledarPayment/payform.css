@@ -6,6 +6,10 @@
     width: 80%;
 }
 
+.date1{
+    width: 80%;
+    margin-left: 8vw !important;
+}
 .date{
     width: 80%;
 }
@@ -31,7 +35,7 @@
     
 }
 
-.visa{
+/* .visa{
 background-color: rgba(64, 188, 10, 0.548);
 color: white;
 }
@@ -44,4 +48,4 @@ color: white;
 .max{
 background-color: rgba(0, 0, 255, 0.547);
 color: white;
-}
+} */

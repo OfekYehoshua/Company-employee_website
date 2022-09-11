@@ -76,7 +76,9 @@
   .backgroung-creme{
     background-color: #ffe6a7;
   }
-
+h1{
+  margin: 2.5%;
+}
 
 @media only screen and (max-width: 764px) {
 .folderListContainer{
@@ -95,3 +97,4 @@
 
 }
 }
+
