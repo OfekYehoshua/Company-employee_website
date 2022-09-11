@@ -1,16 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
 
-* {
-  font-family: "Oswald", sans-serif;
-  color: #6f1d1b;
-}
-.container{
-    width: 30%
-}
-.head{
-    line-height: 1.25;
-     font-size: 48px
-}
 
 
 @media only screen and (max-width: 600px) { 

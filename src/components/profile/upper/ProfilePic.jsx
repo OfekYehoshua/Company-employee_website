@@ -1,5 +1,4 @@
 import Avatar from "@mui/material/Avatar";
-import "./profilePic.css"
 
 const ProfilePic = (props) => {
     return(

@@ -9,7 +9,6 @@ export const ProfileSlice = createSlice({
       email: "amio121212@gmail.com",
       date: "19/04/2000",
       photo: "https://i0.wp.com/newdoorfiji.com/wp-content/uploads/2018/03/profile-img-1.jpg?ssl=1",
-      phone: "+972 50-530-9880",
       rule: "Advisor",
       password: "1234",
     },

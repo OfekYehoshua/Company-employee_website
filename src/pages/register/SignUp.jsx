@@ -49,12 +49,7 @@ export default function SignUp() {
     photo: Yup.string()
     .required("Please enter a URL")
     .matches(/((https?):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/,
-      'invalid URL'
-  ),
-    
-    phone: Yup.string()
-    .required("Pleasse enter your phone number")
-     .min("8", "Invalid phone number"),
+      'invalid URL'),
     
     rule: Yup.string()
     .required("Please enter your rule in the company"),
@@ -139,10 +134,10 @@ export default function SignUp() {
                     value={values.firstName}
                     onBlur={handleBlur}
                   />
-                </Grid>
-                <p style={{ color: "red" }}>
+                <p className="error-message">
                   {errors.firstName && touched.firstName && errors.firstName}
                 </p>
+                </Grid>
                 <Grid item xs={12} sm={6}>
                   <TextField
                     required
@@ -155,44 +150,10 @@ export default function SignUp() {
                     value={values.lastName}
                     onBlur={handleBlur}
                   />
-                </Grid>
-                <p style={{ color: "red" }}>
+                <p className="error-message">
                   {errors.lastName && touched.lastName && errors.lastName}
                 </p>
-                <Grid item xs={12}>
-                  <TextField
-                    required
-                    fullWidth
-                    id="email"
-                    label="Email Address"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    onChange={handleChange}
-                    value={values.email}
-                    onBlur={handleBlur}
-                  />
-                  <p style={{ color: "red" }}>
-                    {errors.email && touched.email && errors.email}
-                  </p>
                 </Grid>
-                <Grid item xs={12}>
-                  <TextField style={{fontWeight: "lighter"}}
-                    className="date"
-                    required
-                    fullWidth
-                    id="date"
-                    name="date"
-                    autoComplete="date"
-                    type="date"
-                    onChange={handleChange}
-                    value={values.date}
-                    onBlur={handleBlur}
-                  />
-                </Grid>
-                <p style={{ color: "red" }}>
-                  {errors.date && touched.date && errors.date}
-                </p>
                 <Grid item xs={12}>
                   <TextField
                     className="photo"
@@ -207,29 +168,45 @@ export default function SignUp() {
                     value={values.photo}
                     onBlur={handleBlur}
                   />
+                  <p className="error-message">
+                    {errors.photo && touched.photo && errors.photo}
+                  </p>
                 </Grid>
-                <p style={{ color: "red" }}>
-                  {errors.photo && touched.photo && errors.photo}
-                </p>
                 <Grid item xs={12}>
                   <TextField
-                    className="phone"
                     required
                     fullWidth
-                    id="phone"
-                    label="Phone Number"
-                    name="phone"
-                    autoComplete="phone"
-                    type="number"
+                    id="email"
+                    label="Email Address"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
                     onChange={handleChange}
-                    value={values.phone}
+                    value={values.email}
                     onBlur={handleBlur}
                   />
+                  <p className="error-message">
+                    {errors.email && touched.email && errors.email}
+                  </p>
                 </Grid>
-                <p style={{ color: "red" }}>
-                  {errors.phone && touched.phone && errors.phone}
-                </p>
-                <Grid item xs={12}>
+                <Grid item xs={12} sm={6}>
+                  <TextField style={{fontWeight: "lighter"}}
+                    className="date"
+                    required
+                    fullWidth
+                    id="date"
+                    name="date"
+                    autoComplete="date"
+                    type="date"
+                    onChange={handleChange}
+                    value={values.date}
+                    onBlur={handleBlur}
+                  />
+                  <p className="error-message">
+                    {errors.date && touched.date && errors.date}
+                  </p>
+                </Grid>
+                <Grid item xs={12} sm={6}>
                   <TextField
                     className="rule"
                     required
@@ -243,10 +220,10 @@ export default function SignUp() {
                     value={values.rule}
                     onBlur={handleBlur}
                   />
+                  <p className="error-message">
+                    {errors.rule && touched.rule && errors.rule}
+                  </p>
                 </Grid>
-                <p style={{ color: "red" }}>
-                  {errors.rule && touched.rule && errors.rule}
-                </p>
                 <Grid item xs={12}>
                   <TextField
                     required
@@ -260,10 +237,10 @@ export default function SignUp() {
                     value={values.password}
                     onBlur={handleBlur}
                   />
+                  <p className="error-message">
+                    {errors.password && touched.password && errors.password}
+                  </p>
                 </Grid>
-                <p style={{ color: "red" }}>
-                  {errors.password && touched.password && errors.password}
-                </p>
                 <Grid item xs={12}>
                   <FormControlLabel
                     control={

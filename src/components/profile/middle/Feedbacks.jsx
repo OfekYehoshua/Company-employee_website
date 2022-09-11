@@ -78,7 +78,7 @@ const Feedbacks = () => {
                 onClick={() => {
                   handelChange(change);
                 }}>
-                <SendIcon/>
+                <SendIcon className="send-icon"/>
                 </Button>
                 </div>
             </div>
