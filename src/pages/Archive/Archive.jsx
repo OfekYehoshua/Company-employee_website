@@ -46,7 +46,6 @@ function ArchiveMain() {
               })
           }
       </div>
-        
       </div>
       <div className="archivefotter">
            <p>
@@ -54,7 +53,7 @@ function ArchiveMain() {
            <br/>it is the courage to countinue that counts.</h1>
            <h3 className="footerbuttom">winston churchill</h3>
            </p>
-          </div>
+      </div>
     </>
   )
 }

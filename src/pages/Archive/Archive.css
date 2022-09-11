@@ -1,17 +1,15 @@
-
- .templateContainer{
+.templateContainer{
      margin: 5% 0;
  }
  .searchInput_Container{
      align-items: center;
      justify-content: center;
      margin: 0 auto;
-    
      margin-bottom: 5vh;
  }
  
  .templateContainer > .searchInput_Container input{
-     width: 100vw;
+     width: 100%;
      padding: 10px;
      outline: none;
      
@@ -23,9 +21,9 @@
      display: grid;
      grid-template-columns: repeat(auto-fill, minmax(50px, 280px));
      gap: 1.2rem;
-     margin-left: 4vw;
-     max-width: 95vw;
-     max-height: 5vh !important;
+     margin-left: 4%;
+     max-width: 95%;
+     max-height: 5% !important;
      box-shadow: black 2px;
  
  }
@@ -36,10 +34,11 @@
      padding: 0px 20px;
  } 
 
+
  
  #searchInput{
      border-radius:  6px;
-     width: 20vw;
+     width: 20%;
  }
  
  .template{
@@ -53,9 +52,7 @@
      justify-content: center !important;
      border-radius: 8px;
      max-height: 330px;
-     box-shadow: 0.5px 0.5px 5px 0.5px  #cbcbcb;
-     
-    
+     box-shadow: 0.5px 0.5px 5px 0.5px  #cbcbcb;  
  }
  
  .image{
@@ -65,27 +62,21 @@
      min-width: 280px;
      position: relative;
      right: 50px;
-     bottom: 6vh;
+     bottom: 22%;
      border-radius: 8px;
  }
 
-
- 
  .imgdiv{
-     height: 140px;   
+     height: 140px;
  }
-
 
  .archivefotter{
     height: min-content;
     min-height: fit-content;
     background: hsla(0, 0%, 100%, 1);
-    margin-top: 200vh;
+    margin-top: 5%;
     margin-bottom: 0%;
     
-    
-
-
 background: linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(30, 95%, 46%, 1) 0%, hsla(30, 82%, 54%, 1) 0%, hsla(0, 0%, 100%, 1) 100%);
 
 background: -moz-linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(30, 95%, 46%, 1) 0%, hsla(30, 82%, 54%, 1) 0%, hsla(0, 0%, 100%, 1) 100%);
@@ -95,30 +86,14 @@ background: -webkit-linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(30, 95%
 filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#e77606", GradientType=1 );
 justify-content: end !important;
 }
-@media only screen and (max-width: 920px) {
-    .archivefotter {
-     margin-top: 350vh;
-    }
-}
-@media only screen and (max-width: 615px) {
-    .archivefotter {
-        margin-top: 550vh;
-       }
-   }
-@media only screen and (max-width: 400px) {
-    .archivefotter {
-        margin-top: 520vh;
-        
-       }
-   }
 
 .footerbuttom{
-    padding-bottom: 20vh;
+    padding-bottom: 10%;
     margin-bottom: 0%;
 }
 
 .footertop{
-    padding-top: 20vh;
+    padding-top: 30%;
 }
 
 .ArchiveTitle{
@@ -137,7 +112,6 @@ justify-content: end !important;
     background-color: #ab5f19;
     color: white;
     border-color: #ab5f19;
-    position: relative; left: 40px;
 }
 
 .filebtn:hover{
