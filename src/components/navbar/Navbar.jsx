@@ -156,27 +156,27 @@ const ResponsiveAppBar = () => {
   const dispatch = useDispatch();
 
   return (
-    <Box sx={{ display: 'flex' }}>
     <AppBar
-      position="fixed"
       open={open}
       className="nav"
       style={{ backgroundColor: "#99582a" }}
     >
-      <Container maxWidth="xl" className="nav2">
+      <Container maxWidth="xl">
         <Toolbar disableGutters style={{ color: "#ffe6a7" }}>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            sx={{
-              marginRight: 5,
-              ...(open && { display: 'none' }),
-            }}
-          >
-            <MessageIcon />
-          </IconButton>
+          {/* {windoWidth > 768 && 
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              onClick={handleDrawerOpen}
+              edge="start"
+              sx={{
+                marginRight: 5,
+                ...(open && { display: 'none' }),
+              }}
+            >
+              <MessageIcon />
+            </IconButton>
+          } */}
           <AnimationIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
           <Typography
             variant="h6"
@@ -234,6 +234,7 @@ const ResponsiveAppBar = () => {
               ))}
             </Menu>
           </Box>
+          <AnimationIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -342,6 +343,12 @@ const ResponsiveAppBar = () => {
         </Toolbar>
       </Container>
     </AppBar>
+  );
+};
+export default ResponsiveAppBar;
+
+
+ {/* {windoWidth > 768 && 
     <Drawer variant="permanent" open={open}>
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
@@ -421,7 +428,4 @@ const ResponsiveAppBar = () => {
           </div>
         </FormControl>
       </Drawer>
-    </Box>
-  );
-};
-export default ResponsiveAppBar;
+      } */}
