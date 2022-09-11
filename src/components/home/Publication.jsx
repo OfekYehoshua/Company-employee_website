@@ -20,7 +20,7 @@ export default function MultiActionAreaCard() {
     <Container maxWidth="lg" className="publicationContainer">
       <Grid container spacing={2}  data-aos="flip-up">
         <Grid item xs={3}>
-          <TransitionsModal
+          <TransitionsModal 
             className="font"
             src="https://cxuniversity.com/wp-content/uploads/2018/09/3736-min.jpg"
             title={"The worker of the month"}
@@ -65,10 +65,10 @@ export default function MultiActionAreaCard() {
             src="https://thumbs.dreamstime.com/b/successful-company-happy-workers-modern-office-160437985.jpg"
             title={"Success is the key!"}
             description={
-              "A long time ago our company was intervene in a scholarship for low economic status, we proud to see the seeds that we sowed bear fruit..."
+              "A long time ago our company was intervene, we proud to see the seeds that we sowed bear fruit..."
             }
             modalDescription={
-              "A long time ago our company was intervene in a scholarship for low economic status, we proud to see the seeds that we sowed bear fruit Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias omnis deleniti deserunt, aliquam voluptatum reiciendis dolor. Eaque quas atque a cumque vel, doloremque ea voluptas eum quasi officia eveniet esse! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias omnis deleniti deserunt, aliquam voluptatum reiciendis dolor. Eaque quas atque a cumque vel, doloremque ea voluptas eum quasi officia eveniet esse! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias omnis deleniti deserunt, aliquam voluptatum reiciendis dolor. Eaque quas atque a cumque vel."
+              "A long time ago our company was intervene in a scholarship for low economic status, we proud to see the seeds that we sowed bear fruit Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias omnis deleniti deserunt, aliquam voluptatum reiciendis dolor. Eaque quas atque a cumque vel, doloremque ea voluptas eum quasi officia eveniet esse! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias omnis deleniti deserunt, aliquam voluptatum reiciendis dolor. Eaque quas atque a cumque vel, doloremque ea voluptas eum quasi officia eveniet esse! Lorem ipsum dolor sit amet consectetur, adipisicing elit.."
             }
           />
         </Grid>

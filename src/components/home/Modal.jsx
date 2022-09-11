@@ -77,7 +77,7 @@ export default function TransitionsModal(props) {
       </Modal>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary" className="effect"
+        <Button size="small" color="primary" className="effect" id="tap"
          onClick={handleOpen}>
           Tap to read 
         </Button>
