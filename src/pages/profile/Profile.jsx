@@ -16,11 +16,14 @@ import CakeIcon from '@mui/icons-material/Cake';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EditIcon from '@mui/icons-material/Edit';
-
+import CreditCardIcon from '@mui/icons-material/CreditCard';
+import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import NumbersIcon from '@mui/icons-material/Numbers';
 
 
 import { Grid, Box } from "@mui/material";
-import { selectProfile, selectSocials } from "../../ProfileSlice";
+import { selectProfile, selectSocials, selectPayment} from "../../ProfileSlice";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 
@@ -28,6 +31,7 @@ import { useState } from "react";
 const Profile = () => {
   const values = useSelector(selectProfile)
   const socials = useSelector(selectSocials)
+  const payment = useSelector(selectPayment)
   
   let linkedinCopy = socials.linkedIn && socials.linkedIn.slice(28).replace(/[0-9]/g, '')
 
@@ -53,6 +57,14 @@ const Profile = () => {
               <WorkerDetails detail={values.email} icon={<EmailIcon className="details-icon"/>}/>
               <WorkerDetails detail={values.date} icon={<CakeIcon className="details-icon"/>}/>
               <WorkerDetails detail={values.rule} icon={<WorkIcon className="details-icon"/>}/>
+              <hr/>
+              {(payment.cardName === "" || payment.cardNumber === "" || payment.expireDate === "" || payment.Cvv === "") ?
+              null : <>
+              <WorkerDetails detail={payment.cardName} icon={<AccountBalanceIcon className="details-icon"/>}/>
+              <WorkerDetails detail={payment.cardNumber} icon={<CreditCardIcon className="details-icon"/>} />
+              <WorkerDetails detail={payment.expireDate} icon={<CalendarTodayIcon className="details-icon"/>}/>
+              <WorkerDetails detail={payment.Cvv} icon={<NumbersIcon className="details-icon"/>}/>
+              </> }
           </Grid>
           <Grid item xs={8}>
               <Feedbacks/>

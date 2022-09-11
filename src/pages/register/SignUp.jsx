@@ -28,7 +28,6 @@ export default function SignUp() {
   const [alert, setaAlert] = React.useState(false);
 
   const Show = () => {
-    console.log(alert);
     setaAlert(!alert);
   };
 
@@ -261,7 +260,7 @@ export default function SignUp() {
               </Button>
               <Grid container justifyContent="flex-end">
                 <Grid item>
-                  <Link to="/login">Allready have an account? sign in</Link>
+                  <Link to="/login">Already have an account? sign in</Link>
                 </Grid>
               </Grid>
               </form>
