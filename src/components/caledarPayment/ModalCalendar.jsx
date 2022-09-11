@@ -1,4 +1,4 @@
-import * as React from 'react';
+import {useState} from 'react';
 import "./calendar.css";
 import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
@@ -15,20 +15,21 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
+  bgcolor: '#ffe6a7',
+  border: '2px solid #ffe6a7',
   boxShadow: 24,
   p: 4,
+  borderRadius: 8,
 };
 
 export default function ModalCalendar({day, mounth, year}) {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   return (
     <div className="popup">
-      <Button onClick={handleOpen} className="paybtn">payment</Button>
+      <Button onClick={handleOpen} className="open-payment-btn">payment</Button>
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -37,18 +38,16 @@ export default function ModalCalendar({day, mounth, year}) {
         closeAfterTransition
         BackdropComponent={Backdrop}
         BackdropProps={{
-          timeout: 500,
-        
+        timeout: 500,   
         }}
       >
         <Fade in={open}>
           <Box sx={style}>
-            <Typography id="transition-modal-title" variant="h6" component="h2">
+            <Typography className='modal-title' id="transition-modal-title" variant="h6" component="h2">
               The date you've selected:
             </Typography>
             <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-                {/* <PaymentForm  day={day} mounth={mounth} year={year}/> */}
-                <h3 className="date1">
+                <h3 className="selected-date">
                 {day}.{mounth}.{year}
                 </h3>,
               <MewPaymentForm/>

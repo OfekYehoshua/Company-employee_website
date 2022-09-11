@@ -10,7 +10,7 @@ export const ProfileSlice = createSlice({
       date: "19/04/2000",
       photo: "https://i0.wp.com/newdoorfiji.com/wp-content/uploads/2018/03/profile-img-1.jpg?ssl=1",
       rule: "Advisor",
-      password: "1234",
+      password: "1234"
     },
 
     socials: {
@@ -18,12 +18,19 @@ export const ProfileSlice = createSlice({
       linkedIn: "https://www.linkedin.com/in/philip-kouchner-886264100/",
       facebook: "https://www.facebook.com/phil.serlin",
       twitter: "https://twitter.com/_exize",
-      instegram: "https://www.instagram.com/phil",
+      instegram: "https://www.instagram.com/phil"
     },
 
     user: {
       email: "amio121212@gmail.com",
       password: "1234"
+    },
+
+    payment: {
+      cardName: "",
+      cardNumber: "",
+      expireDate: "",
+      Cvv: ""
     }
   },
 
@@ -60,12 +67,20 @@ export const ProfileSlice = createSlice({
     logout: (state) => {
       state.user.email = ""
       state.user.password = ""
+    },
+
+    updatePayment: (state, values) => {
+      state.payment.cardName = values.payload.cardName;
+      state.payment.cardNumber = values.payload.cardNumber;
+      state.payment.expireDate = values.payload.expireDate;
+      state.payment.Cvv = values.payload.Cvv;
     }
   },
 });
 
-export const { update, updateSocials, updateUser, logout } = ProfileSlice.actions;
+export const { update, updateSocials, updateUser, updatePayment,logout } = ProfileSlice.actions;
 export const selectProfile = (state) => state.profile.profile;
 export const selectSocials = (state) => state.profile.socials;
 export const selectUser = (state) => state.profile.user;
+export const selectPayment = (state) => state.profile.payment;
 export default ProfileSlice.reducer;
