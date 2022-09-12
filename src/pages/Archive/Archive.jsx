@@ -28,30 +28,29 @@ function ArchiveMain() {
           />
         </div>
         <div className="template_Container">
-          {data
-            .filter((val) => {
-              if (searchTerm == "") {
-                return val;
-              } else if (
-                val.title.toLowerCase().includes(searchTerm.toLowerCase())
-              ) {
-                return val;
-              }
-            })
-            .map((val) => {
-              return (
-                <div className="cards-div">
-                  <div className="template" key={val.id}>
-                    <div className="img-div">
-                      <img className="image" src={val.image} alt="" />
-                    </div>
-                    <h3>{val.title}</h3>
-                    <p className="desctiption">{val.description}</p>
-                    <div>
-                      <button className="file-btn">open files</button>
-                    </div>
+          {
+            data 
+              .filter((val) => {
+                if(searchTerm == ""){
+                  return val;
+                }else if(val.title.toLowerCase().includes(searchTerm.toLowerCase())){
+                  return val;
+                }
+              })
+              .map((val) => {
+                return(
+                  <div className="cards-div">
+                    <div className="template" key={val.id}>
+                      <div className="img-div">
+                        <img className="image" src={val.image} alt="" />
+                        </div>
+                        <h3>{val.title}</h3>
+                        <p className="desctiption">{val.description}</p>
+                        <div>
+                          <button className="file-btn">open files</button>
+                        </div>
+                    </div> 
                   </div>
-                </div>
               );
             })}
         </div>

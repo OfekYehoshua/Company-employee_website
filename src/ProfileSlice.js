@@ -22,8 +22,8 @@ export const ProfileSlice = createSlice({
     },
 
     user: {
-      email: "amio121212@gmail.com",
-      password: "1234"
+      email: "",
+      password: ""
     },
 
     payment: {
