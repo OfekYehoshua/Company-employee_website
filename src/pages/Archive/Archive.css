@@ -1,12 +1,12 @@
 body{
     background-color: #ece9e6;
     max-height: fit-content;
-    background: #ece9e6; /* fallback for old browsers */
+    background: #ece9e6; 
     background: -webkit-linear-gradient(
       to right,
       #ffffff,
       #ece9e6
-      ); /* Chrome 10-25, Safari 5.1-6 */
+      ); 
       background: linear-gradient(
         to right,
         #ffffff,
@@ -14,7 +14,7 @@ body{
       );
 }
 
-.templateContainer{
+.template-container{
       margin: 5% 0; 
  }
  .searchInput_Container{
@@ -24,33 +24,34 @@ body{
      margin-bottom: 5%;
  }
  
- .templateContainer > .searchInput_Container input{
+ .template-container > .search-input_Container input{
      width: 100%;
      padding: 10px;
      outline: none;
      
  }
- .templateContainer .template_Container{
+ .template-container .template_Container{
      display: flex;
      flex-direction: column;
      display: grid;
      grid-template-columns: repeat(auto-fill, minmax(50px, 280px));
      gap: 1.2rem;
      margin-left: 4%;
-     max-width: 95%;
+     max-width: 100%;
      max-height: 5% !important;
      box-shadow: black 2px;
  
  }
- .templateContainer .template_Container .template{
+ .template-container .template_Container .template{
      background-color: white;
      margin: 30px;
      padding: 0px 20px;   
  } 
  
- #searchInput{
+ #search-input{
      border-radius:  6px;
      width: 20%;
+     margin-bottom: 40px;
  }
  
  .template{
@@ -60,7 +61,7 @@ body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
  }
  
- .cardsdiv{
+ .cards-div{
      justify-content: center !important;
      border-radius: 8px;
      max-height: 330px;
@@ -79,67 +80,83 @@ body{
      border-radius: 8px;
  }
  
- .imgdiv{
+ .img-div{
      height: 140px;
  }
 
- .archivefotter{
+ .archive-fotter{
     height: min-content;
     min-height: fit-content;
     background: hsla(0, 0%, 100%, 1);
     margin-top: 5%;
     margin-bottom: 0%;
     
-background: linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(30, 95%, 46%, 1) 0%, hsla(30, 82%, 54%, 1) 0%, hsla(0, 0%, 100%, 1) 100%);
+background: linear-gradient(90deg, rgb(240, 239, 239) 0%, hsla(30, 95%, 46%, 1) 0%, hsla(30, 82%, 54%, 1) 0%, rgb(240, 239, 239) 100%);
 
-background: -moz-linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(30, 95%, 46%, 1) 0%, hsla(30, 82%, 54%, 1) 0%, hsla(0, 0%, 100%, 1) 100%);
+background: -moz-linear-gradient(90deg, rgb(240, 239, 239) 0%, hsla(30, 95%, 46%, 1) 0%, hsla(30, 82%, 54%, 1) 0%, rgb(242, 241, 241) 100%);
 
-background: -webkit-linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(30, 95%, 46%, 1) 0%, hsla(30, 82%, 54%, 1) 0%, hsla(0, 0%, 100%, 1) 100%);
+background: -webkit-linear-gradient(90deg, rgb(240, 239, 239)0%, hsla(30, 95%, 46%, 1) 0%, hsla(30, 82%, 54%, 1) 0%, rgb(243, 239, 239) 100%);
 
 filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#e77606", GradientType=1 );
 justify-content: end !important;
 }
 
-.footerbuttom{
+.footer-buttom{
     padding-bottom: 10%;
     margin-bottom: 0%;
     font-family: "Dancing Script", cursive;
 }
 
-.footertop{
+.footer-top{
     padding-top: 30%;
     font-family: "Dancing Script", cursive;
 }
 
-.ArchiveTitle{
+.Archive-title{
     margin-top: 100px;
     font-size: 2.3rem;
 }
 
-.ArchiveTitle2{
+.Archive-title2{
     margin: 0%;
 }
 
-.filebtn{
+.file-btn{
     width: 80px;
     height: 30px;
     border-radius: 6px;
     background-color: #ab5f19;
     color: white;
     border-color: #ab5f19;
+    position: relative ;
 }
 
-.filebtn:hover{
+.file-btn:hover{
     opacity: 80%;
 }
 
+@media only screen and (max-width: 1600px) {
+.template-container .template_Container{
+margin-left:11%;
+}
+}
+ @media only screen and (max-width: 1400px) {
+.template-container .template_Container{
+margin-left:4%;
+}
+}   
 @media only screen and (max-width: 925px) {
-.templateContainer .template_Container{
+.template-container .template_Container{
 margin-left: 15%;
 }
 }
 @media only screen and (max-width: 670px) {
-.templateContainer .template_Container{
+.template-container .template_Container{
 margin-left:13%;
+}
+}
+@media only screen and (max-width: 500px) {
+.template-container .template_Container{
+margin-left:15%;
 }
 }

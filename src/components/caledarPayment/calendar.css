@@ -11,23 +11,36 @@
   border-radius: 8px !important;
 }
 
-.open-payment-btn {
-  margin-left: 60px;
-  z-index: 300;
-  background-color: #6f1d1b !important;
-  color: white !important;
+.open-payment-btn{
+    margin-left: 10px;
+    z-index: 300;
+    background-color: #99582a !important;
+    color: white !important;
+    height: 20px;
+    width: 100px;
+    margin-bottom: 40px !important;
+    position: relative;
+    left: 120px;
+    border-radius: 6px !important;
 }
 
-.popup {
-  position: absolute;
-  border-radius: 8px;
+.open-payment-btn:hover{
+    opacity: 80%
+    ;
 }
 
-.modal-title {
-  font-size: xx-large !important;
-  font-weight: 500 !important;
-  font-family: "Oswald", sans-serif;
-  letter-spacing: 0.1rem;
+.popup{
+    position: absolute;
+    border-radius: 8px; 
+    bottom: 0.1%;
+}
+
+.modal-title{
+    font-size: xx-large !important;
+    font-weight: 500  !important;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 0.1rem;
+
 }
 
 .selected-date {
@@ -58,13 +71,13 @@
     width: 0;
     margin-right: 70vw;
     margin-top: 5vh;
-  }
-  .paybtn {
-    margin-left: 1vw !important;
-    bottom: vh;
-    background-color: #6f1d1b !important;
-    color: white !important;
-  }
+    }
+    
+    .paybtn{
+        margin-left: 1vw !important;
+        background-color:  #6f451b !important;
+        color: white !important;
+    }
 }
 
 @media only screen and (max-width: 1240px) {
@@ -73,5 +86,17 @@
     bottom: 1vh;
     background-color: #6f1d1b !important;
     color: white !important;
-  }
+    }
+    
+    .popup{
+        position: absolute;
+        border-radius: 8px; 
+        bottom: 10%;
+    }
+    
+    .calendar{
+        border-radius: 8px !important;
+        height: 460px !important;
+    }
 }
+
