@@ -31,7 +31,7 @@ const Home = () => {
       </div>
       <div className="img-card-container">
         <Typography>
-          <h1 id="welcome" data-aos="zoom-in" >Welcom to our employee web!</h1>
+          <h1 id="welcome" data-aos="zoom-in-up" >Welcom to our employee web!</h1>
         </Typography>
         <div className="img-card">
           <div className="graph-container">
