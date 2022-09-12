@@ -59,20 +59,19 @@ export default function SignUp() {
     .matches(/[0-9]/, 'Password can only contain numbers.')
 });
   
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    const values = {
-      firstName: data.get("firstName"),
-      lastName: data.get("lastName"),
-      email: data.get("email"),
-      date: data.get("date"),
-      photo: data.get("photo"),
-      phoneNum: data.get("phone"),
-      rule: data.get("rule"),
-      password: data.get("password"),
+  const handleSubmition = (values) => {
+
+    const value = {
+      firstName: values.firstName,
+      lastName: values.lastName,
+      email: values.email,
+      date: values.date,
+      photo: values.photo,
+      phoneNum: values.phoneNum,
+      rule: values.rule,
+      password: values.password,
     };
-    dispatch(update(values));
+    dispatch(update(value));
   };
   const dispatch = useDispatch()
 
@@ -108,10 +107,11 @@ export default function SignUp() {
                 rule: "",
                 password: "",
               }}
-              onSubmit={(values) => alert(JSON.stringify(values))}
+              onSubmit={(values) => handleSubmition(values)}
               validationSchema={schema}
             >
               {({
+                handleSubmit,
                 handleChange,
                 handleBlur,
                 values,
