@@ -70,6 +70,7 @@ export const ProfileSlice = createSlice({
     },
 
     updatePayment: (state, values) => {
+      console.log(values.payload)
       state.payment.cardName = values.payload.cardName;
       state.payment.cardNumber = values.payload.cardNumber;
       state.payment.expireDate = values.payload.expireDate;

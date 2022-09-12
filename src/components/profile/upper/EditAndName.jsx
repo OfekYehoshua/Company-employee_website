@@ -53,7 +53,7 @@ const NameAndEdit = (props) => {
 
   return (
     <div className="edit-container">
-      <h1 className="profile-details profile-title">{props.profileName}</h1>
+      <h1 className="profile-title">{props.profileName}</h1>
       <Button onClick={handleOpen}>
         <EditIcon className="edit-icon" />
       </Button>

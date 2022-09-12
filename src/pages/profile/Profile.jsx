@@ -53,7 +53,7 @@ const Profile = () => {
       </div>
       <div className="body-profile">
         <Grid container >
-          <Grid item xs={2}>
+          <Grid item xs={2} md={2}>
               <WorkerDetails detail={values.email} icon={<EmailIcon className="details-icon"/>}/>
               <WorkerDetails detail={values.date} icon={<CakeIcon className="details-icon"/>}/>
               <WorkerDetails detail={values.rule} icon={<WorkIcon className="details-icon"/>}/>
@@ -66,7 +66,7 @@ const Profile = () => {
               <WorkerDetails detail={payment.Cvv} icon={<NumbersIcon className="details-icon"/>}/>
               </> }
           </Grid>
-          <Grid item xs={8}>
+          <Grid item xs={8} md={8}>
               <Feedbacks/>
           </Grid>
         </Grid>

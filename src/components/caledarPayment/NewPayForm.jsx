@@ -16,11 +16,7 @@ import { Alert, Button, FormControl, InputLabel, MenuItem, Select } from '@mui/m
 
 export default function MewPaymentForm() {
     const [alert, setaAlert] = useState(false);
-    const [fail, setaFail] = useState(false);
 
-    const showFail = () => {
-      setaFail(!fail);
-      };
     const show = () => {
         setaAlert(!alert);
       };
@@ -31,35 +27,33 @@ export default function MewPaymentForm() {
         
         cardNumber: Yup.string()
         .required("Please enter your card number")
-        .matches(/[0-9]/, 'Password can only contain numbers.'),
+        .matches(/[0-9]/, 'Password can only contain numbers.')
+        .min(16)
+        .max(16),
   
         expireDate: Yup.string()
         .required("Please enter the expire date")  
-        .matches(/[0-9]/, 'Password can only contain numbers.')      ,
+        .matches(/[0-9]/, 'Password can only contain numbers.')
+        .min(4)
+        .max(4)      ,
         
         Cvv: Yup.string()
         .matches(/[0-9]/, 'Password can only contain numbers.')
         .required("Please enterthe digits behind the card")
+        .min(3)
         .max(3),
     });
 
-    const handleSubmit = (event) => {
+    const handleSubmition = (values) => {
 
-      event.preventDefault();
-      const data = new FormData(event.currentTarget);
-      const values = {
-        cardName: data.get("cardName"),
-        cardNumber: data.get("cardNumber"),
-        expireDate: data.get("expireDate"),
-        Cvv: data.get("Cvv"),
+      const paymentDetails = {
+        cardName: values.cardName,
+        cardNumber: values.cardNumber,
+        expireDate:  values.expireDate,
+        Cvv:  values.Cvv,
       };
-      if (values.cardName === "" || values.cardNumber === "" || values.expireDate === "" || values.Cvv === ""){
-        showFail ()
-      }else{
-      dispatch(updatePayment(values));
+      dispatch(updatePayment(paymentDetails))
       show()
-      console.log(values);
-      }
     };
     const dispatch = useDispatch()
   return (
@@ -75,9 +69,10 @@ export default function MewPaymentForm() {
         Cvv: ""
       }} 
       validationSchema={schema} 
-      onSubmit={handleSubmit}
+      onSubmit={(values) => handleSubmition(values)}
       >
       {({
+        handleSubmit,
         handleChange,
         handleBlur,
         values,
@@ -131,7 +126,6 @@ export default function MewPaymentForm() {
                 id="expDate"
                 label="Expiry date"
                 name="expireDate"
-                type='number'
                 fullWidth
                 autoComplete="cc-exp"
                 variant="standard"
@@ -147,7 +141,6 @@ export default function MewPaymentForm() {
                 required
                 id="cvv"
                 label="CVV"
-                type='number'
                 fullWidth
                 name="Cvv"
                 autoComplete="cc-csc"
@@ -173,8 +166,6 @@ export default function MewPaymentForm() {
       )}
       </Formik>
         {alert ? <AlertPayment /> : null}  
-        {fail ? <Alert severity="error">This is an error alert — check it out!</Alert> : null}   
-
     </React.Fragment>
   );
 }
