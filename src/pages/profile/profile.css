@@ -12,7 +12,7 @@
 .container {
   position: absolute;
   z-index: 10;
-  top: 25vw;
+  top: 270px;
   left: 12%;
 }
 
@@ -205,13 +205,10 @@
 }
 
 @media only screen and (max-width: 768px) {
-  /* .css-1pqm26d-MuiAvatar-img {
-    width: 40%;
-    height: 40%;
-  } */
 
-  .body-profile {
-    height: 80rem;
+
+  .container{
+    top: 35vw;
   }
 
   .profile-title {
@@ -219,69 +216,63 @@
   }
 
   .profile-details {
-    font-size: x-large;
+    font-size: 3vw;
     margin-top: 0;
-    margin-left: 15%;
   }
 
   .edit-icon {
-    height: 35px !important;
-    width: 35px !important;
+    height: 25px !important;
+    width: 25px !important;
   }
 
   .socials-container {
     margin-left: 0 !important;
+    margin-bottom: 0;
   }
 
   .socials {
-    font-size: 10px !important;
+    font-size: 65% !important;
     margin-right: 5%;
-    margin-right: -10px !important;
   }
 
   .social-icon {
-    margin-right: 10px;
     height: 50% !important;
     width: 50% !important;
-    align-self: center;
+    margin-right: 10px;
   }
 
   .worker-details {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 100%;
-    font-size: x-large;
+    font-size: x-small;
     margin-right: 0;
-    margin: 0;
-  
+    margin-bottom: 0;
   }
 
   .details-icon {
     margin-right: 15px;
-    margin-bottom: 20px;
-    height: 60px !important;
-    width: 60px !important;
+    margin-bottom: 10px;
+    height: 30px !important;
+    width: 30px !important;
   }
 
   .add-feedback-container {
     width: 80%;
     height: 50%;
-    margin-top: 3%;
     border-radius: 60px;
     box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.49);
   }
 
   .add-feedback-avatar {
-    height: 50px !important;
-    width: 50px !important;
-    margin-top: 16px;
-    margin-left: 20px;
+    height: 40px !important;
+    width: 40px !important;
+    margin-bottom: 4px;
+    margin-left: 10px;
     border: 1px solid rgba(0, 0, 0, 0.115);
   }
 
   .add-feedback {
     margin-left: 20px;
-    font-size: 2rem;
+    align-self: center;
+    font-size: 120%;
   }
 
   .send-icon {
@@ -299,38 +290,37 @@
     margin-top: 6px;
     margin-left: 5px;
     margin-right: 0px;
-    height: 50px !important;
-    width: 50px !important;
+    height: 35px !important;
+    width: 35px !important;
   }
 
   .feedback-author {
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
     font-size: 70%;
   }
 
   .author-rule {
     font-weight: 190;
     font-size: 10px;
-    text-align: center;
   }
 
   .feedback-content {
     font-weight: 300;
-    font-size: x-large;
-    margin-top: 30px;
+    font-size: 60%;
+    margin-top: 10px;
     padding: 0 30px;
   }
 
   .personal-container {
-    flex-direction: column-reverse !important;
-    margin-left: 3% ;
- 
+    flex-direction: row !important;
   }
 }
 
 @media only screen and (max-width: 470px) {
   .body-profile {
     height: 100%;
+    padding-top: 20px;
   }
 
   .body-container {
@@ -339,17 +329,17 @@
   }
 
   .profile-title {
-    font-size: xxx-large !important;
+    font-size: 5vw !important;
   }
 
   .profile-details {
-    font-size: x-large;
+    font-size: 3vw;
     margin-top: 0;
   }
 
   .edit-icon {
-    height: 38px !important;
-    width: 38px !important;
+    height: 18px !important;
+    width: 18px !important;
   }
 
   .socials-container {
@@ -359,27 +349,34 @@
 
   .socials {
     font-size: 1.8rem;
-    margin-right: 40px;
+    margin-right: 10px;
+    margin-bottom: 10px;
   }
 
   .social-icon {
-    margin-right: 10px;
-    height: 38px !important;
-    width: 38px !important;
+    margin-right: 5px;
+    height: 18px !important;
+    width: 18px !important;
     align-self: center;
   }
 
   .worker-details {
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     font-size: 20px;
+    margin-left:200px;
   }
 
   .details-icon {
     margin-right: 15px;
     margin-bottom: 20px;
-    height: 60px !important;
-    width: 60px !important;
+    height: 30px !important;
+    width: 30px !important;
+  }
+  
+  .personal-container{
+    flex-direction: column-reverse !important;
+    margin-left: 2%;
   }
 
   .add-feedback-container {
@@ -391,37 +388,36 @@
   }
 
   .add-feedback-avatar {
-    margin-top: 0px;
-    margin-left: 0px;
+    margin-top: 5px;
+    margin-left: 5px;
     border: 1px solid rgba(0, 0, 0, 0.115);
   }
 
   .add-feedback {
-    margin-left: 20px;
-    font-size: 2rem;
+    margin-left: 10px;
+    font-size: 120%;
   }
 
   .send-icon {
     margin-right: 20px;
-
     width: 50px !important;
   }
 
   .feedback-author {
-    margin-top: 0;
-    font-size: 15px;
+    margin-top: 4px;
+    font-size: 12px;
   }
 
   .feedback-content {
     font-weight: 300;
     font-size: 11px;
     margin-top: 0;
-    padding: 0;
+    padding: 5px;
   }
 }
 
 @media only screen and (max-width: 370px) {
-  .edit-icon {
-    margin-right: 200px;
+  .worker-details {
+    margin-left:170px;
   }
 }
