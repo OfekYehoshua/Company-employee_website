@@ -36,19 +36,17 @@ function ArchiveMain() {
               .map((val) => {
                 return(
                   <div className="cards-div">
-                  <div className="template" key={val.id}>
-                    <div className="img-div">
-                      <img className="image" src={val.image} alt="" />
-                      </div>
-                      <h3>{val.title}</h3>
-                      <p className="desctiption">{val.description}</p>
-                      <div>
-                        <button className="file-btn">open files</button>
+                    <div className="template" key={val.id}>
+                      <div className="img-div">
+                        <img className="image" src={val.image} alt="" />
                         </div>
-                  </div> 
-
+                        <h3>{val.title}</h3>
+                        <p className="desctiption">{val.description}</p>
+                        <div>
+                          <button className="file-btn">open files</button>
+                        </div>
+                    </div> 
                   </div>
-                </div>
               );
             })}
         </div>
