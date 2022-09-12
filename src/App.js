@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<LogIn/>} />
+        <Route path="/" element={<LogIn/>}/>
         <Route path="/signup" element={<SignUp/>} />
         <Route path="/login" element={<LogIn/>} />
         <Route path="/profile" element={<LogIn/>} />
@@ -28,8 +28,8 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Home/>} />
-          <Route path="/signup" element={<SignUp/>} />
-          <Route path="/login" element={<LogIn/>} />
+          <Route path="/signup" element={<Home/>} />
+          <Route path="/login" element={<Home/>} />
           <Route path="/profile" element={<Profile/>} />
           <Route path="/archive" element={<Archive/>} />
         </Routes>
