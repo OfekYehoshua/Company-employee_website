@@ -146,3 +146,10 @@
     padding: 0%;
   }
 }
+
+.css-b6lsxj-MuiButtonBase-root-MuiCardActionArea-root:hover{
+  background-color: #e9d8a6;
+}
+.css-1t6e9jv-MuiCardActions-root:hover{
+  background-color: #e9d8a6;
+}

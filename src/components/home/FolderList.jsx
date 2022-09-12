@@ -24,7 +24,7 @@ export default function FolderList() {
             <ImageIcon />
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary="Happy Hour" secondary="Jan 9, 2023" />
+        <ListItemText primary="Happy Hour" secondary="feb 5, 2022" />
       </ListItem>
       <ListItem className="folder-list">
         <ListItemAvatar>
