@@ -13,7 +13,7 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
+  width: "70%",
   bgcolor: "#ffe6a7",
   border: "2px solid #ffe6a7",
   boxShadow: 24,
@@ -56,7 +56,7 @@ export default function ModalCalendar({ day, mounth, year }) {
               <h3 className="selected-date">
                 {day}.{mounth}.{year}
               </h3>
-              ,
+              
               <MewPaymentForm />
             </Typography>
           </Box>
