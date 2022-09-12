@@ -207,7 +207,8 @@
   /* to get footer to central/// */
 
   .mailAndSocials{
-    margin-left: 20% !important ;
+    margin-left: 30% !important ;
+    width: 70% !important;
   }
   .css-k3f0g4-MuiGrid-root {
     margin-left: 8% !important;
@@ -224,10 +225,16 @@
     margin-left: 15% !important;
   }
   .email-input-container{
-    margin-left: 2% !important;
+    margin-left: 0% !important;
   }
   .sign-up-container{
     margin-left: 10% !important;
+  }
+  .d-flex{
+    width: 105%;
+  }
+  .commmunity-title{
+    margin-bottom: 0%;
   }
 
 }

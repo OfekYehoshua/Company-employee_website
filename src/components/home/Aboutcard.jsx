@@ -1,9 +1,19 @@
 import * as React from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 
 export default function Aboutcard() {
+  
+  useEffect(() => {
+    let windoWidth = window.innerWidth;
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
-    <div style={{ width: "30%" }}>
-      <h1 style={{ lineHeight: 1.25, fontSize: "48px" }}>about us</h1>
+    <div style={{ width: "30%" }} data-aos="zoom-in" >
+      <h1 style={{ lineHeight: 1.25, fontSize: "48px" }} data-aos="zoom-in" >about us</h1>
       <p
         style={{
           marginTop: "35px",
