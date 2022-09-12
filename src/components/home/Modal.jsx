@@ -88,7 +88,7 @@ export default function TransitionsModal(props) {
             </Fade>
           </Modal>
         </CardActionArea>
-        <CardActions>
+        <CardActions className="button-container">
           <Button
             size="small"
             color="primary"

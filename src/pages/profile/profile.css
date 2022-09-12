@@ -205,10 +205,10 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .css-1pqm26d-MuiAvatar-img {
+  /* .css-1pqm26d-MuiAvatar-img {
     width: 40%;
     height: 40%;
-  }
+  } */
 
   .body-profile {
     height: 80rem;
@@ -321,7 +321,7 @@
     padding: 0 30px;
   }
 
-  .css-11lq3yg-MuiGrid-root {
+  .personal-container {
     flex-direction: column-reverse !important;
     margin-left: 3% ;
  
