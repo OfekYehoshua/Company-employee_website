@@ -27,7 +27,7 @@ const style = {
   border: "2px solid #ffe6a7",
   boxShadow: 24,
   p: 4,
-  borderRadius: 10
+  borderRadius: 10,
 };
 
 const NameAndEdit = (props) => {
@@ -70,7 +70,12 @@ const NameAndEdit = (props) => {
       >
         <Fade in={open}>
           <Box sx={style}>
-            <Typography className="edit-title" id="transition-modal-title" variant="h6" component="h2">
+            <Typography
+              className="edit-title"
+              id="transition-modal-title"
+              variant="h6"
+              component="h2"
+            >
               Change your details
             </Typography>
             <Typography id="transition-modal-description" sx={{ mt: 2 }}>
