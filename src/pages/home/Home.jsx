@@ -52,7 +52,7 @@ const Home = () => {
               height="558"
             />
           </div>
-          <Aboutcard className="card"></Aboutcard>
+          <Aboutcard className="card" data-aos="zoom-in" ></Aboutcard>
         </div>
       </div>
       <Typography>
