@@ -4,42 +4,34 @@
 .home {
   margin-top: 68px;
   background: #ece9e6;
-  background: -webkit-linear-gradient(
-    to right,
-    #ffffff,
-    #ece9e6
-    ); 
-    background: linear-gradient(
-      to right,
-      #ffffff,
-      #ece9e6
-      ); 
-    }
-    
+  background: -webkit-linear-gradient(to right, #ffffff, #ece9e6);
+  background: linear-gradient(to right, #ffffff, #ece9e6);
+}
+
 /* ====================  Head  ======================== */
 #head {
-    background-image: url("https://api.time.com/wp-content/uploads/2021/02/laptop-home-office.jpg?quality=85&w=2121");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-  }
-    
+  background-image: url("https://api.time.com/wp-content/uploads/2021/02/laptop-home-office.jpg?quality=85&w=2121");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+}
+
 #quote {
-    color: #6f1d1b;
-    font-size: 6vw;
-    line-height: 15vh;
-    font-weight: 700;
-    margin: 0 5px 24px;
-    float: left;
-    padding: 25px;
-    font-family: "Dancing Script", cursive;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-    margin-left: 240px;
-    display: inline;
-  }
+  color: #6f1d1b;
+  font-size: 6vw;
+  line-height: 15vh;
+  font-weight: 700;
+  margin: 0 5px 24px;
+  float: left;
+  padding: 25px;
+  font-family: "Dancing Script", cursive;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  margin-left: 240px;
+  display: inline;
+}
 
 #punchline {
   color: #6f1d1b;
@@ -62,7 +54,7 @@
 }
 
 /* ==================== Welcome & About us & Animation  ======================== */
-.img-card-container{
+.img-card-container {
   background-color: white;
 }
 
@@ -81,20 +73,20 @@
 }
 
 #graph {
-display: flex;
-box-shadow: 0px 0px 10px 0px rgba(210, 198, 198, 0.25) ;
-margin-bottom: 30px; 
-border-radius: 12px;
+  display: flex;
+  box-shadow: 0px 0px 10px 0px rgba(210, 198, 198, 0.25);
+  margin-bottom: 30px;
+  border-radius: 12px;
 }
 
-.pulications-title{
+.pulications-title {
   margin-top: 100px;
   margin-bottom: 70px;
   font-size: 40px;
 }
 
 /* ============= Calendar & Events List & Blog  ======================== */
-.events-title{
+.events-title {
   margin-top: 100px;
   margin-bottom: 10px;
   font-size: 60px;
@@ -114,18 +106,18 @@ border-radius: 12px;
   padding-left: 1vw;
   padding-right: 1vw;
   padding-bottom: 0%;
-  background-color: #99582a  !important;
+  background-color: #99582a !important;
   border-radius: 8px;
   left: 20vw;
   min-width: fit-content;
 }
 
-.events-list{
+.events-list {
   margin-bottom: 20px !important;
   margin-top: 5vh;
   width: 25vw;
   padding: 8px;
-  background-color: #99582a  !important;
+  background-color: #99582a !important;
   border-radius: 8px;
   left: 20vw;
   min-width: fit-content;
@@ -143,23 +135,27 @@ border-radius: 12px;
   height: 380px;
 }
 
-#explain-archive{
+#explain-archive {
   margin-top: 80px;
   margin-bottom: 0;
 }
 
-.archive-img{
+.archive-img {
   position: relative;
   animation-duration: 0.6s;
 }
 
 @keyframes mymove {
-  from {top: 0px;}
-  to {top: 20px;}
+  from {
+    top: 0px;
+  }
+  to {
+    top: 20px;
+  }
 }
 
-.archive-img:hover{
-  animation: mymove 1s ;
+.archive-img:hover {
+  animation: mymove 1s;
 }
 
 #archive {
@@ -184,30 +180,30 @@ border-radius: 12px;
     background-image: url("https://img.freepik.com/free-photo/flat-lay-photo-office-desk-with-laptop-copy-space-background_1150-45597.jpg?w=2000");
     height: 70vh;
   }
-  
+
   #quote {
     font-size: 12vw;
     margin-left: 10vw;
     line-height: 9vh;
     text-align: match-parent;
   }
-  
+
   #punchline {
     font-size: 12vw;
     margin-left: 10vw;
     line-height: 9vh;
     text-align: left;
   }
-  
-  #name{
-  font-size: 5vw;
-  }
-  
-  .img-card{
-    flex-direction:column-reverse;
+
+  #name {
+    font-size: 5vw;
   }
 
-  #graph{
+  .img-card {
+    flex-direction: column-reverse;
+  }
+
+  #graph {
     width: 100%;
   }
 
@@ -215,20 +211,20 @@ border-radius: 12px;
     display: flex;
     flex-direction: column-reverse;
   }
-  
-  .calendar{
+
+  .calendar {
     margin-bottom: 20px !important;
     margin-top: 5vh;
     width: 49vw;
     height: 55vh;
     padding-top: 2vh;
     padding-left: 1.2vw;
-    background-color: #99582a  !important;
+    background-color: #99582a !important;
     border-radius: 8px;
     left: 20vw;
   }
-  
-  .events-list{
+
+  .events-list {
     width: 80vw;
     height: 60vh;
     margin-bottom: 0;
@@ -237,5 +233,3 @@ border-radius: 12px;
     padding-right: 3vw;
   }
 }
-
-

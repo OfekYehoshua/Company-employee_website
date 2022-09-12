@@ -1,7 +1,7 @@
-import ResponsiveAppBar from "../../components/navbar/Navbar"
-import React, {useState} from "react";
-import './Archive.css';
-import data from './TemplteData.json'
+import ResponsiveAppBar from "../../components/navbar/Navbar";
+import React, { useState } from "react";
+import "./Archive.css";
+import data from "./TemplteData.json";
 import { useEffect } from "react";
 import { useLocation } from "react-router";
 
@@ -13,6 +13,7 @@ function ArchiveMain() {
   }, [ResponsiveAppBar]);
   return (
     <>
+
     <ResponsiveAppBar/>
     <h1 className="Archive-title">The company archive</h1>
     <h2 className="Archive-title2">looking for company data?</h2>
@@ -45,11 +46,12 @@ function ArchiveMain() {
                         <button className="file-btn">open files</button>
                         </div>
                   </div> 
+
                   </div>
-                )
-              })
-          }
-      </div>
+                </div>
+              );
+            })}
+        </div>
       </div>
       <div className="archive-fotter">
            <p>
@@ -60,7 +62,7 @@ function ArchiveMain() {
       </div>
       
     </>
-  )
+  );
 }
 
 export default ArchiveMain;
