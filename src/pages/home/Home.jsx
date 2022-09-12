@@ -33,7 +33,7 @@ const Home = () => {
       </div>
       <div className="img-card-container">
         <Typography>
-          <h1 id="welcome" data-aos="zoom-in">
+          <h1 id="welcome" data-aos="zoom-in-up">
             Welcom to our employee web!
           </h1>
         </Typography>
