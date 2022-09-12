@@ -1,21 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
 
-*{
-    font-family: "Oswald", sans-serif;
-    color: #6f1d1b;
-   
+* {
+  font-family: "Oswald", sans-serif;
+  color: #6f1d1b;
 }
 
-.theme{
-    background: #abbaab !important;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ffffff, #abbaab) !important;  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ffffff, #abbaab) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.theme {
+  background: #abbaab !important; 
+  background: -webkit-linear-gradient(
+    to right,
+    #ffffff,
+    #abbaab
+  ) !important; 
+  background: linear-gradient(
+    to right,
+    #ffffff,
+    #abbaab
+  ) !important; 
 }
 
-
-.error-message{
-    color: red;
-    margin: 0;
-    font-size: small;
+.error-message {
+  color: red;
+  margin: 0;
+  font-size: small;
 }
