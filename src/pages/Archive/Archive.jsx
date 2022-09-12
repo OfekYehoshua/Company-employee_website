@@ -1,7 +1,7 @@
-import ResponsiveAppBar from "../../components/navbar/Navbar"
-import React, {useState} from "react";
-import './Archive.css';
-import data from './TemplteData.json'
+import ResponsiveAppBar from "../../components/navbar/Navbar";
+import React, { useState } from "react";
+import "./Archive.css";
+import data from "./TemplteData.json";
 import { useEffect } from "react";
 import { useLocation } from "react-router";
 
@@ -13,12 +13,13 @@ function ArchiveMain() {
   }, [ResponsiveAppBar]);
   return (
     <>
+
     <ResponsiveAppBar/>
-    <h1 className="ArchiveTitle">The company archive</h1>
-    <h2 className="ArchiveTitle2">looking for company data?</h2>
-      <div className="templateContainer">
-        <div className="searchInput_Container">
-          <input id="searchInput" type="text" placeholder="Search in archive..." onChange={(event) => {
+    <h1 className="Archive-title">The company archive</h1>
+    <h2 className="Archive-title2">looking for company data?</h2>
+      <div className="template-container">
+        <div className="search-input_Container">
+          <input id="search-input" type="text" placeholder="Search in archive..." onChange={(event) => {
             setSearchTerm(event.target.value);
           }} />
         </div>
@@ -34,32 +35,34 @@ function ArchiveMain() {
               })
               .map((val) => {
                 return(
-                  <div className="cardsdiv">
+                  <div className="cards-div">
                   <div className="template" key={val.id}>
-                    <div className="imgdiv">
+                    <div className="img-div">
                       <img className="image" src={val.image} alt="" />
                       </div>
                       <h3>{val.title}</h3>
                       <p className="desctiption">{val.description}</p>
-                      <div className="popup">
-                        <button className="filebtn">open files</button>
+                      <div>
+                        <button className="file-btn">open files</button>
                         </div>
                   </div> 
+
                   </div>
-                )
-              })
-          }
+                </div>
+              );
+            })}
+        </div>
       </div>
-      </div>
-      <div className="archivefotter">
+      <div className="archive-fotter">
            <p>
-           <h1 style={{lineHeight: 1.25, fontSize: "65px", paddingTop:"10vh",}} className="footertop">soccess is not final. failur is not fatal.
+           <h1 style={{lineHeight: 1.25, fontSize: "65px", paddingTop:"10vh",}} className="footer-top">soccess is not final. failur is not fatal.
            <br/>it is the courage to countinue that counts.</h1>
-           <h3 className="footerbuttom">winston churchill</h3>
+           <h3 className="footer-buttom">winston churchill</h3>
            </p>
       </div>
+      
     </>
-  )
+  );
 }
 
 export default ArchiveMain;

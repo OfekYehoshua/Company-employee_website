@@ -15,9 +15,11 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 const Home = () => {
-    useEffect(()=>{
-        Aos.init({duration: 1000});
-    },[]);
+  let windoWidth = window.innerWidth;
+
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
     <div className="home">
       <ResponsiveAppBar />
@@ -31,7 +33,9 @@ const Home = () => {
       </div>
       <div className="img-card-container">
         <Typography>
-          <h1 id="welcome" data-aos="zoom-in-up" >Welcom to our employee web!</h1>
+          <h1 id="welcome" data-aos="zoom-in-up">
+            Welcom to our employee web!
+          </h1>
         </Typography>
         <div className="img-card">
           <div className="graph-container">
@@ -56,19 +60,19 @@ const Home = () => {
           Keeping you updated - All the latest news!
         </h1>
       </Typography>
-        <MultiActionAreaCard />
+      <MultiActionAreaCard />
       <Typography>
         <h1 className="events-title">Company's events</h1>
       </Typography>
       <div className="calendar-and-blog">
         <div data-aos="zoom-in-right" className="calendar">
-          <ActionBarComponentProps/>
+          <ActionBarComponentProps />
         </div>
         <div data-aos="zoom-in" className="events-list">
-          <FolderList/>
+          <FolderList />
         </div>
         <div data-aos="zoom-in-left">
-        <Blog/>
+          <Blog />
         </div>
       </div>
       <div id="box-archive">
@@ -79,7 +83,7 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <Collabs />
+      {windoWidth > 876 ? <Collabs /> : null}
       <Footer />
     </div>
   );

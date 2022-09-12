@@ -62,11 +62,11 @@ const Blog = () => {
   const values = useSelector(selectProfile);
 
   return (
-    <Box className="blog-container backgroung-brown" >
+    <Box className="blog-container backgroung-brown">
       <Box className="blog">
         <List className="comments-container">
-          <Comment 
-            alt="Remy Sharp" 
+          <Comment
+            alt="Remy Sharp"
             src="https://www.aceshowbiz.com/images/photo/gary_oldman.jpg"
             userName="Remy Sharp"
             subject="Brunch this weekend?"
@@ -97,7 +97,13 @@ const Blog = () => {
                   src={values.photo}
                   userName={values.firstName + " " + values.lastName}
                   subject={comment}
-                  date={today.getHours() + ":" + (today.getMinutes() < 10 ? "0" + today.getMinutes() : today.getMinutes())}
+                  date={
+                    today.getHours() +
+                    ":" +
+                    (today.getMinutes() < 10
+                      ? "0" + today.getMinutes()
+                      : today.getMinutes())
+                  }
                 />
               </div>
             );
@@ -119,19 +125,20 @@ const Blog = () => {
                   alt="Cindy Baker"
                   src={values.photo}
                   sx={{ height: 33, width: 33, marginBottom: 0.5 }}
-                  />
+                />
               </InputAdornment>
             }
             endAdornment={
               <InputAdornment position="end">
                 <Button
-                variant="text"
-                onClick={() => {
-                  handelSubmit(change);
-                }}>
-                <SendIcon/>
+                  variant="text"
+                  onClick={() => {
+                    handelSubmit(change);
+                  }}
+                >
+                  <SendIcon />
                 </Button>
-                </InputAdornment>
+              </InputAdornment>
             }
           />
         </FormControl>
