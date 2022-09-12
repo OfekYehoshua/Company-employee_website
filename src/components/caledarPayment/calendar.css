@@ -12,16 +12,28 @@
 }
 
 .open-payment-btn{
-    margin-left: 60px;
+    margin-left: 10px;
     z-index: 300;
-    background-color:  #6f1d1b !important;
+    background-color: #99582a !important;
     color: white !important;
+    height: 20px;
+    width: 100px;
+    margin-bottom: 40px !important;
+    position: relative;
+    left: 120px;
+    border-radius: 6px !important;
+}
+.open-payment-btn:hover{
+    opacity: 80%
+    ;
 }
 
 .popup{
     position: absolute;
     border-radius: 8px; 
+    bottom: 0.1%;
 }
+
 
 .modal-title{
     font-size: xx-large !important;
@@ -52,8 +64,6 @@
     opacity: 80%;
 }
 
-
-
 @media only screen and (max-width: 764px) {
 .calendarcss{
     height: 10%;
@@ -63,8 +73,7 @@
     }
     .paybtn{
         margin-left: 1vw !important;
-        bottom: vh;
-        background-color:  #6f1d1b !important;
+        background-color:  #6f451b !important;
         color: white !important;
         }
 }
@@ -76,4 +85,15 @@
     background-color:  #6f1d1b !important;
     color: white !important;
     }
+    .popup{
+        position: absolute;
+        border-radius: 8px; 
+        bottom: 10%;
+    }
+    .calendar{
+        border-radius: 8px !important;
+        height: 460px !important;
+    }
+    
+    
 }
