@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div className={`footer-background`}>
       <div className="footer-container">
-        <Grid container className="mailAndSocials">
+        <Grid container className="mail-socials">
           <Grid item xs={5}>
             <h2 className="footer-title">Stay in the loop</h2>
             <p className="footer-description">
