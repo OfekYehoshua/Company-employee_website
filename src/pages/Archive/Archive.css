@@ -24,7 +24,7 @@ body{
      margin-bottom: 5%;
  }
  
- .template-container > .search-input_Container input{
+ .template-container > .search-input-container input{
      width: 100%;
      padding: 10px;
      outline: none;
