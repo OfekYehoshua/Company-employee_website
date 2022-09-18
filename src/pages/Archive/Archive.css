@@ -30,7 +30,7 @@ body{
      outline: none;
      
  }
- .template-container .template_Container{
+ .template-container .template-container{
      display: flex;
      flex-direction: column;
      display: grid;
@@ -42,7 +42,7 @@ body{
      box-shadow: black 2px;
  
  }
- .template-container .template_Container .template{
+ .template-container .template-container .template{
      background-color: white;
      margin: 30px;
      padding: 0px 20px;   
