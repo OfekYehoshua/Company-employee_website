@@ -17,7 +17,7 @@ function ArchiveMain() {
       <h1 className="Archive-title">The company archive</h1>
       <h2 className="Archive-title2">looking for company data?</h2>
       <div className="template-container">
-        <div className="search-input_Container">
+        <div className="search-input-container">
           <input
             id="search-input"
             type="text"
