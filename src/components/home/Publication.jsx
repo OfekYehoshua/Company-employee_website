@@ -27,7 +27,7 @@ export default function MultiActionAreaCard() {
             }
           />
         </Grid>
-        <Grid item xs={3} className="gridSize">
+        <Grid item xs={3} >
           <TransitionsModal
             className="font"
             src="https://img.huffingtonpost.com/asset/5cd6fd50240000310076eccd.jpeg?ops=1778_1000"
