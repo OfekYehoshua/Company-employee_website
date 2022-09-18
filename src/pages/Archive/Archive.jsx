@@ -27,7 +27,7 @@ function ArchiveMain() {
             }}
           />
         </div>
-        <div className="template_Container">
+        <div className="template-container">
           {
             data 
               .filter((val) => {
