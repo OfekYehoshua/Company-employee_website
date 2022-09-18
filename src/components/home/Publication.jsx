@@ -12,7 +12,7 @@ export default function MultiActionAreaCard() {
   }, []);
 
   return (
-    <Container maxWidth="lg" className="publicationContainer">
+    <Container maxWidth="lg" className="publication-container">
       <Grid container spacing={2} data-aos="flip-up">
         <Grid item xs={3}>
           <TransitionsModal
